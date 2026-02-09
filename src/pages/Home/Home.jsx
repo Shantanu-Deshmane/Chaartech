@@ -12,11 +12,13 @@ import {
     CheckCircle,
     Users,
     Clock,
-    Rocket
+    Rocket,
+    Quote,
+    Star
 } from 'lucide-react';
 import { Button } from '../../components/common';
 import { homeMethodology, innovationCards } from '../../data/services';
-import { stats } from '../../data/testimonials';
+import { testimonialsData } from '../../data/testimonials';
 import { ANIMATIONS } from '../../utils/constants';
 import { openWhatsApp } from '../../utils/helpers';
 import './Home.css';
@@ -297,6 +299,47 @@ const Home = () => {
                                 </motion.div>
                             ))}
                         </div>
+                    </div>
+                </div>
+            </motion.section>
+
+            {/* Testimonials Section */}
+            <motion.section
+                className="testimonials-section"
+                initial="hidden"
+                whileInView="visible"
+                viewport={{ once: true, margin: "-100px" }}
+                variants={ANIMATIONS.fadeInUp}
+            >
+                <div className="container">
+                    <div className="section-header-center">
+                        <span className="section-label-light">CLIENTS FEEDBACK</span>
+                        <h2 className="section-title-light">What They Say About Us</h2>
+                    </div>
+
+                    <div className="testimonials-grid-staggered">
+                        {testimonialsData.map((testimonial, index) => (
+                            <motion.div
+                                key={testimonial.id}
+                                className="testimonial-card-unique"
+                                variants={ANIMATIONS.staggerItem}
+                                whileHover={{ y: -10, zIndex: 10, scale: 1.02 }}
+                            >
+                                <div className="quote-icon-container">
+                                    <Quote size={24} fill="currentColor" />
+                                </div>
+                                <p className="testimonial-message">"{testimonial.message}"</p>
+                                <div className="testimonial-footer">
+                                    <div className="rating-stars">
+                                        {[...Array(testimonial.rating)].map((_, i) => (
+                                            <Star key={i} size={14} fill="#ffc107" color="#ffc107" />
+                                        ))}
+                                    </div>
+                                    <h4 className="client-name">{testimonial.name}</h4>
+                                    <span className="client-role">{testimonial.role}</span>
+                                </div>
+                            </motion.div>
+                        ))}
                     </div>
                 </div>
             </motion.section>

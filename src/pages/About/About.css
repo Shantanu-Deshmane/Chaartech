@@ -203,7 +203,7 @@
 
 .vision-feature p {
     font-size: 13px;
-    color: var(--color-text-muted);
+    color: var(--color-text-secondary);
     line-height: 1.5;
 }
 
@@ -339,6 +339,7 @@
 /* Why Choose Us Section */
 .why-choose-section {
     background: var(--color-bg);
+    padding-bottom: 80px;
 }
 
 .why-choose-grid {
@@ -551,6 +552,7 @@
 /* Team Section - 4 Cards in One Row */
 .team-section {
     background: var(--color-bg-secondary);
+    text-align: center;
 }
 
 .team-grid-four {

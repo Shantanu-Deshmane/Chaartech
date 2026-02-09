@@ -176,6 +176,7 @@ const About = () => {
                 <div className="container">
                     <motion.div
                         className="section-header"
+                        style={{ paddingBottom: '40px' }}
                         initial="hidden"
                         whileInView="visible"
                         viewport={{ once: true }}
@@ -350,6 +351,7 @@ const About = () => {
                 <div className="container">
                     <motion.div
                         className="section-header"
+                        style={{ textAlign: 'center', marginBottom: '60px' }}
                         initial="hidden"
                         whileInView="visible"
                         viewport={{ once: true }}
@@ -414,7 +416,7 @@ const About = () => {
                         <p>Let's discuss how we can help bring your vision to life.</p>
                         <Button
                             size="lg"
-                            variant="whatsapp"
+                            variant="primary"
                             rightIcon={<ArrowRight size={20} />}
                             onClick={() => openWhatsApp("Hi! I'm interested in working with ChaarTech.")}
                         >

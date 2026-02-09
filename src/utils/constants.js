@@ -31,7 +31,6 @@ export const NAV_LINKS = [
   { name: 'Home', path: '/' },
   { name: 'About', path: '/about' },
   { name: 'Services', path: '/services' },
-  { name: 'Portfolio', path: '/portfolio' },
   { name: 'Blog', path: '/blog' },
   { name: 'Contact', path: '/contact' },
 ];
@@ -52,7 +51,6 @@ export const FOOTER_LINKS = {
   ],
   resources: [
     { name: 'Blog', path: '/blog' },
-    { name: 'Portfolio', path: '/portfolio' },
     { name: 'FAQ', path: '/faq' },
     { name: 'Support', path: '/contact' },
   ],

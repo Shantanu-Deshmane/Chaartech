@@ -9,7 +9,6 @@ const Home = lazy(() => import('./pages/Home'));
 const About = lazy(() => import('./pages/About'));
 const Services = lazy(() => import('./pages/Services'));
 const Contact = lazy(() => import('./pages/Contact'));
-const Portfolio = lazy(() => import('./pages/Portfolio'));
 const Blog = lazy(() => import('./pages/Blog'));
 const BlogPost = lazy(() => import('./pages/BlogPost'));
 const Privacy = lazy(() => import('./pages/Privacy'));
@@ -52,14 +51,7 @@ const App = () => {
               </Suspense>
             }
           />
-          <Route
-            path="portfolio"
-            element={
-              <Suspense fallback={<PageLoader />}>
-                <Portfolio />
-              </Suspense>
-            }
-          />
+
           <Route
             path="blog"
             element={

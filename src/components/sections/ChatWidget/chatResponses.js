@@ -28,19 +28,19 @@ const RESPONSES = {
     pricing: {
         keywords: ['price', 'cost', 'quote', 'pricing', 'budget', 'how much', 'rates'],
         response: "Great question! 💰 Our pricing depends on project scope and requirements.\n\n**Typical ranges:**\n• Simple websites: ₹15,000 - ₹50,000\n• Custom web apps: ₹50,000 - ₹2,00,000+\n• Mobile apps: ₹1,00,000 - ₹5,00,000+\n\nWould you like to share your project details for a custom quote?",
-        quickReplies: ['Describe my project', 'Contact sales', 'View portfolio']
+        quickReplies: ['Describe my project', 'Contact sales']
     },
 
     website: {
         keywords: ['website', 'web development', 'web design', 'site', 'landing page'],
         response: "We build stunning, high-performance websites! 🌐\n\n**Our web services include:**\n• Business websites\n• E-commerce stores\n• Landing pages\n• Web applications\n• WordPress development\n\nAll our sites are mobile-responsive, SEO-optimized, and built for speed!",
-        quickReplies: ['Get a quote', 'View portfolio', 'Timeline?']
+        quickReplies: ['Get a quote', 'Timeline?']
     },
 
     mobile: {
         keywords: ['app', 'mobile', 'android', 'ios', 'application'],
         response: "We create powerful mobile apps! 📱\n\n**What we build:**\n• Native iOS apps\n• Native Android apps\n• Cross-platform (React Native)\n• Progressive Web Apps\n\nFrom idea to app store launch, we handle everything!",
-        quickReplies: ['Get a quote', 'Development timeline', 'View portfolio']
+        quickReplies: ['Get a quote', 'Development timeline']
     },
 
     contact: {
@@ -55,11 +55,7 @@ const RESPONSES = {
         quickReplies: ['Start a project', 'Get a quote', 'Services']
     },
 
-    portfolio: {
-        keywords: ['portfolio', 'work', 'projects', 'examples', 'case study'],
-        response: "We'd love to show you our work! 🎨\n\nWe've built projects across various industries including e-commerce, healthcare, education, and fintech.\n\nVisit our portfolio page to see detailed case studies!",
-        quickReplies: ['View portfolio', 'Get a quote', 'Similar projects']
-    },
+
 
     thanks: {
         keywords: ['thank', 'thanks', 'appreciate', 'helpful'],

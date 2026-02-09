@@ -1,56 +1,37 @@
-export const testimonials = [
+export const testimonialsData = [
     {
         id: 1,
-        name: 'Priya Sharma',
-        role: 'CEO',
-        company: 'TechStart Solutions',
-        image: null, // Placeholder - will use initials
-        content: 'ChaarTech transformed our outdated website into a modern, high-converting platform. Our online leads increased by 150% within three months!',
+        name: "James Wilson",
+        role: "CEO, TechFlow",
+        message: "ChaarTech transformed our legacy system into a modern powerhouse. Their attention to detail is unmatched.",
         rating: 5
     },
     {
         id: 2,
-        name: 'Rahul Mehta',
-        role: 'Founder',
-        company: 'FoodieExpress',
-        image: null,
-        content: 'The mobile app they developed for us exceeded all expectations. The user experience is seamless, and our customers love it. Highly recommended!',
+        name: "Sarah Chen",
+        role: "Founder, Bloom Digital",
+        message: "The mobile app they built for us has seen incredible user engagement. Truly experts in their craft.",
         rating: 5
     },
     {
         id: 3,
-        name: 'Ananya Patel',
-        role: 'Marketing Director',
-        company: 'GrowthHub India',
-        image: null,
-        content: 'Their SEO and digital marketing strategies helped us rank on the first page of Google. The ROI has been incredible for our business.',
+        name: "Michael Ross",
+        role: "Product Manager, Insightly",
+        message: "Professional, fast, and highly skilled. They didn't just code; they solved real business problems.",
         rating: 5
     },
     {
         id: 4,
-        name: 'Vikram Singh',
-        role: 'CTO',
-        company: 'CloudNine Tech',
-        image: null,
-        content: 'Professional, responsive, and technically excellent. ChaarTech delivered our complex e-commerce platform on time and within budget.',
+        name: "Elena Rodriguez",
+        role: "Marketing Director, GlobalReach",
+        message: "Our SEO rankings tripled within months of working with the ChaarTech team. Highly recommended!",
         rating: 5
     },
     {
         id: 5,
-        name: 'Sneha Reddy',
-        role: 'Operations Head',
-        company: 'HealthFirst Clinic',
-        image: null,
-        content: 'From design to deployment, the team was exceptional. Our patient booking system has streamlined our operations significantly.',
+        name: "David Park",
+        role: "CTO, CloudScale",
+        message: "Exceptional cloud migration strategy. Zero downtime and significant performance gains. Fantastic partners.",
         rating: 5
     }
 ];
-
-export const stats = [
-    { value: '50+', label: 'Projects Delivered' },
-    { value: '30+', label: 'Happy Clients' },
-    { value: '99%', label: 'Client Satisfaction' },
-    { value: '24/7', label: 'Support Available' }
-];
-
-export default testimonials;

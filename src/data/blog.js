@@ -60,7 +60,7 @@ Contact us today to discuss your project!
         author: 'ChaarTech Team',
         date: '2026-02-01',
         readTime: 5,
-        image: null,
+        image: 'https://images.unsplash.com/photo-1467232004584-a241de8bcf5d?auto=format&fit=crop&w=800&q=80',
         tags: ['Website', 'Business', 'Digital Transformation']
     },
     {
@@ -145,7 +145,7 @@ At ChaarTech, we offer comprehensive SEO services tailored for small businesses.
         author: 'ChaarTech Team',
         date: '2026-02-05',
         readTime: 8,
-        image: null,
+        image: 'https://images.unsplash.com/photo-1572177191856-3cde618dee1f?auto=format&fit=crop&w=800&q=80',
         tags: ['SEO', 'Small Business', 'Marketing']
     },
     {
@@ -241,7 +241,7 @@ Contact us for a free consultation!
         author: 'ChaarTech Team',
         date: '2026-02-07',
         readTime: 6,
-        image: null,
+        image: 'https://images.unsplash.com/photo-1526406915802-7c63c2936798?auto=format&fit=crop&w=800&q=80',
         tags: ['Mobile App', 'Website', 'Strategy']
     }
 ];

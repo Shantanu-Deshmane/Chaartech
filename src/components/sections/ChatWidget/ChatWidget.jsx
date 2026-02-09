@@ -114,7 +114,7 @@ const ChatWidget = () => {
             return ['Web development pricing', 'Mobile app pricing', 'Get a quote'];
         }
         if (lower.includes('web') || lower.includes('website')) {
-            return ['Website timeline', 'See portfolio', 'Start a project'];
+            return ['Website timeline', 'Our services', 'Start a project'];
         }
         if (lower.includes('app') || lower.includes('mobile')) {
             return ['App features', 'Development process', 'Get estimate'];

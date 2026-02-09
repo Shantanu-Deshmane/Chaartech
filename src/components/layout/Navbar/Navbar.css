@@ -79,6 +79,12 @@
     border-radius: 100px;
     padding: 6px;
     backdrop-filter: blur(10px);
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.05);
+}
+
+[data-theme="dark"] .nav-pill {
+    background: rgba(255, 255, 255, 0.08);
+    border-color: rgba(255, 255, 255, 0.12);
 }
 
 .navbar-solid .nav-pill {
@@ -100,10 +106,14 @@
     padding: 10px 20px;
     font-size: 14px;
     font-weight: 500;
-    color: rgba(255, 255, 255, 0.8);
+    color: var(--color-text-secondary);
     text-decoration: none;
     border-radius: 100px;
     transition: all 0.2s ease;
+}
+
+[data-theme="dark"] .nav-pill-link {
+    color: rgba(255, 255, 255, 0.8);
 }
 
 .navbar-solid .nav-pill-link {
@@ -113,6 +123,11 @@
 .nav-pill-link:hover {
     color: var(--color-primary);
     background: var(--color-bg-muted);
+}
+
+[data-theme="dark"] .nav-pill-link:hover {
+    color: #ffffff;
+    background: rgba(255, 255, 255, 0.1);
 }
 
 .navbar-solid .nav-pill-link:hover {
@@ -145,6 +160,12 @@
     color: var(--color-text);
     cursor: pointer;
     transition: all 0.2s ease;
+}
+
+[data-theme="dark"] .theme-btn {
+    background: rgba(255, 255, 255, 0.08);
+    border-color: rgba(255, 255, 255, 0.15);
+    color: #ffffff;
 }
 
 .navbar-solid .theme-btn {

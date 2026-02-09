@@ -109,7 +109,7 @@ export const milestones = [
         year: '2026',
         quarter: 'Q2',
         title: 'Expanding Services',
-        description: 'Added mobile app development and digital marketing to our service portfolio.'
+        description: 'Added mobile app development and digital marketing to our service range.'
     }
 ];
 

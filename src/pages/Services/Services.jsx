@@ -133,10 +133,10 @@ const Services = () => {
 
                             <div className="service-detail-visual">
                                 <div
-                                    className="service-visual-placeholder"
+                                    className="service-visual-image"
                                     style={{ '--service-color': service.color }}
                                 >
-                                    <service.icon size={80} />
+                                    <img src={service.image} alt={service.title} />
                                 </div>
                             </div>
                         </motion.div>
@@ -185,33 +185,7 @@ const Services = () => {
                 </div>
             </motion.section>
 
-            {/* CTA Section */}
-            <motion.section
-                className="section services-cta-section"
-                initial="hidden"
-                whileInView="visible"
-                viewport={{ once: true, margin: "-100px" }}
-                variants={ANIMATIONS.scaleIn}
-            >
-                <div className="container">
-                    <div
-                        className="services-cta-content"
-                    >
-                        <h2>Ready to Get Started?</h2>
-                        <p>Let's discuss your project and create a custom solution for your business.</p>
-                        <div className="services-cta-buttons">
-                            <Button
-                                size="lg"
-                                variant="whatsapp"
-                                rightIcon={<ArrowRight size={20} />}
-                                onClick={() => openWhatsApp("Hi! I'd like to discuss a project with ChaarTech.")}
-                            >
-                                Get a Free Quote
-                            </Button>
-                        </div>
-                    </div>
-                </div>
-            </motion.section>
+
         </>
     );
 };

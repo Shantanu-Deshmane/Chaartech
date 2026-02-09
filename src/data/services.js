@@ -16,7 +16,8 @@ export const services = [
             'Website Maintenance'
         ],
         technologies: ['React', 'Next.js', 'Node.js', 'WordPress', 'Shopify'],
-        color: 'var(--color-primary)'
+        color: 'var(--color-primary)',
+        image: 'https://images.unsplash.com/photo-1498050108023-c5249f4df085?auto=format&fit=crop&w=800&q=80'
     },
     {
         id: 'app',
@@ -33,7 +34,8 @@ export const services = [
             'App Store Optimization'
         ],
         technologies: ['React Native', 'Flutter', 'Swift', 'Kotlin', 'Firebase'],
-        color: 'var(--color-secondary)'
+        color: 'var(--color-secondary)',
+        image: 'https://images.unsplash.com/photo-1512941937669-90a1b58e7e9c?auto=format&fit=crop&w=800&q=80'
     },
     {
         id: 'marketing',
@@ -50,7 +52,8 @@ export const services = [
             'Marketing Analytics'
         ],
         technologies: ['Google Ads', 'Meta Ads', 'HubSpot', 'Mailchimp', 'Analytics'],
-        color: 'var(--color-accent)'
+        color: 'var(--color-accent)',
+        image: 'https://images.unsplash.com/photo-1460925895917-afdab827c52f?auto=format&fit=crop&w=800&q=80'
     },
     {
         id: 'seo',
@@ -67,7 +70,8 @@ export const services = [
             'SEO Reporting & Analytics'
         ],
         technologies: ['SEMrush', 'Ahrefs', 'Google Search Console', 'Moz', 'Screaming Frog'],
-        color: 'var(--color-success)'
+        color: 'var(--color-success)',
+        image: 'https://images.unsplash.com/photo-1432888622747-4eb9a8f2c20e?auto=format&fit=crop&w=800&q=80'
     },
     {
         id: 'design',
@@ -84,7 +88,8 @@ export const services = [
             'Brand Identity Design'
         ],
         technologies: ['Figma', 'Adobe XD', 'Sketch', 'InVision', 'Principle'],
-        color: 'var(--color-warning)'
+        color: 'var(--color-warning)',
+        image: 'https://images.unsplash.com/photo-1586717791821-3f44a563eb4c?auto=format&fit=crop&w=800&q=80'
     },
     {
         id: 'cloud',
@@ -101,7 +106,8 @@ export const services = [
             '24/7 Monitoring & Support'
         ],
         technologies: ['AWS', 'Google Cloud', 'Azure', 'Docker', 'Kubernetes'],
-        color: 'var(--color-info)'
+        color: 'var(--color-info)',
+        image: 'https://images.unsplash.com/photo-1451187580459-43490279c0fa?auto=format&fit=crop&w=800&q=80'
     }
 ];
 

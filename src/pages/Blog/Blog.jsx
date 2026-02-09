@@ -78,9 +78,7 @@ const Blog = () => {
                             >
                                 <Link to={`/blog/${post.slug}`} className="blog-card-link">
                                     <div className="blog-image">
-                                        <div className="blog-image-placeholder">
-                                            <span>{post.category.charAt(0)}</span>
-                                        </div>
+                                        <img src={post.image} alt={post.title} />
                                     </div>
                                     <div className="blog-content">
                                         <div className="blog-meta">
