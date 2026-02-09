@@ -1,0 +1,169 @@
+/* === FLAT BUTTON STYLES === */
+.btn {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: var(--spacing-2);
+    font-family: var(--font-primary);
+    font-weight: var(--font-semibold);
+    line-height: 1;
+    border-radius: var(--radius-lg);
+    cursor: pointer;
+    transition: all var(--transition-normal);
+    border: 2px solid transparent;
+    white-space: nowrap;
+    position: relative;
+    overflow: hidden;
+}
+
+.btn:disabled {
+    opacity: 0.5;
+    cursor: not-allowed;
+}
+
+/* === SIZES === */
+.btn-sm {
+    padding: 10px 20px;
+    font-size: var(--text-sm);
+    border-radius: var(--radius-md);
+}
+
+.btn-md {
+    padding: 14px 28px;
+    font-size: var(--text-base);
+}
+
+.btn-lg {
+    padding: 18px 36px;
+    font-size: var(--text-lg);
+}
+
+.btn-xl {
+    padding: 22px 44px;
+    font-size: var(--text-xl);
+}
+
+/* === PRIMARY - BRAND BLUE === */
+.btn-primary {
+    background: var(--color-primary);
+    color: var(--color-white);
+}
+
+.btn-primary:hover:not(:disabled) {
+    background: var(--color-primary-dark);
+}
+
+.btn-primary:active:not(:disabled) {
+    background: var(--color-primary-dark);
+}
+
+/* === SECONDARY - BRAND BLUE === */
+.btn-secondary {
+    background: var(--color-secondary);
+    color: var(--color-white);
+}
+
+.btn-secondary:hover:not(:disabled) {
+    background: var(--color-secondary-dark);
+}
+
+/* === OUTLINE === */
+.btn-outline {
+    background: transparent;
+    border-color: var(--color-primary);
+    color: var(--color-primary);
+}
+
+.btn-outline:hover:not(:disabled) {
+    background: var(--color-primary);
+    color: var(--color-white);
+}
+
+/* === OUTLINE LIGHT === */
+.btn-outline-light {
+    background: transparent;
+    border-color: rgba(255, 255, 255, 0.5);
+    color: var(--color-white);
+}
+
+.btn-outline-light:hover:not(:disabled) {
+    background: var(--color-white);
+    border-color: var(--color-white);
+    color: var(--color-primary);
+}
+
+/* === GHOST === */
+.btn-ghost {
+    background: transparent;
+    color: var(--color-primary);
+}
+
+.btn-ghost:hover:not(:disabled) {
+    background: rgba(17, 82, 212, 0.1);
+}
+
+/* === DARK === */
+.btn-dark {
+    background: var(--color-dark);
+    color: var(--color-white);
+}
+
+.btn-dark:hover:not(:disabled) {
+    background: var(--color-dark-light);
+}
+
+/* === WHATSAPP === */
+.btn-whatsapp {
+    background: #25D366;
+    color: var(--color-white);
+}
+
+.btn-whatsapp:hover:not(:disabled) {
+    background: #128C7E;
+}
+
+/* === FULL WIDTH === */
+.btn-full {
+    width: 100%;
+}
+
+/* === LOADING === */
+.btn-loading {
+    position: relative;
+}
+
+.btn-spinner {
+    width: 20px;
+    height: 20px;
+    animation: spin 1s linear infinite;
+}
+
+/* === ICONS === */
+.btn-icon {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.btn-icon svg {
+    width: 18px;
+    height: 18px;
+}
+
+.btn-icon-left {
+    margin-right: var(--spacing-1);
+}
+
+.btn-icon-right {
+    margin-left: var(--spacing-1);
+}
+
+@keyframes spin {
+    from {
+        transform: rotate(0deg);
+    }
+
+    to {
+        transform: rotate(360deg);
+    }
+}

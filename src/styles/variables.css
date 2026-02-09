@@ -1,0 +1,228 @@
+/* === CHAARTECH COLOR PALETTE === */
+/* Clean, Simple Brand Colors */
+
+:root {
+  scroll-behavior: smooth;
+  /* === PRIMARY COLORS - Brand Blue === */
+  --color-primary: #1152d4;
+  /* Brand blue - buttons, links, accents, cube glow */
+  --color-primary-light: #3170e8;
+  /* Lighter brand blue */
+  --color-primary-dark: #0d3da0;
+  /* Darker brand blue */
+  --color-primary-rgb: 17, 82, 212;
+
+  /* === SECONDARY - Same as Primary for Consistency === */
+  --color-secondary: #1152d4;
+  --color-secondary-light: #3170e8;
+  --color-secondary-dark: #0d3da0;
+  --color-secondary-rgb: 17, 82, 212;
+
+  /* === ACCENT - Brand Blue === */
+  --color-accent: #1152d4;
+  --color-accent-light: #3170e8;
+  --color-accent-dark: #0d3da0;
+  --color-accent-rgb: 17, 82, 212;
+
+  /* === NEUTRALS === */
+  --color-white: #FFFFFF;
+  --color-black: #0f0f0f;
+
+  /* Gray Scale */
+  --color-gray-50: #f6f6f8;
+  --color-gray-100: #f6f6f8;
+  --color-gray-200: #e2e8f0;
+  --color-gray-300: #cbd5e1;
+  --color-gray-400: #94a3b8;
+  /* slate-400 - dark mode body text */
+  --color-gray-500: #64748b;
+  /* slate-500 - muted/secondary text */
+  --color-gray-600: #475569;
+  /* slate-600 - light mode body text */
+  --color-gray-700: #334155;
+  --color-gray-800: #1a1f27;
+  /* charcoal-muted */
+  --color-gray-900: #0f172a;
+  /* slate-900 - light mode headings */
+
+  /* Legacy gray names */
+  --color-gray: #64748b;
+  --color-gray-light: #94a3b8;
+  --color-gray-dark: #334155;
+
+  /* === SEMANTIC COLORS === */
+  --color-success: #059669;
+  --color-warning: #D97706;
+  --color-error: #DC2626;
+  --color-info: #1152d4;
+
+  /* === DARK/LIGHT BASE - Using New Palette === */
+  --color-dark: #161b22;
+  /* charcoal - dark cards, footer */
+  --color-dark-light: #1a1f27;
+  /* charcoal-muted */
+  --color-dark-lighter: #282e39;
+  /* border-muted */
+  --color-light: #f6f6f8;
+  /* background-light */
+  --color-light-dark: #e2e8f0;
+
+  /* === GRADIENTS - Simplified === */
+  --gradient-primary: linear-gradient(135deg, #1152d4 0%, #1152d4 100%);
+  --gradient-secondary: linear-gradient(135deg, #1152d4 0%, #0d3da0 100%);
+  --gradient-dark: linear-gradient(135deg, #0f0f0f 0%, #161b22 100%);
+  --gradient-hero: linear-gradient(135deg, #0f0f0f 0%, #161b22 50%, #1a1f27 100%);
+  --gradient-light: linear-gradient(135deg, #f6f6f8 0%, #e2e8f0 100%);
+  --gradient-accent: linear-gradient(135deg, #1152d4 0%, #3170e8 100%);
+
+  /* === TYPOGRAPHY === */
+  --font-primary: 'Plus Jakarta Sans', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+  --font-heading: 'Outfit', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+  --font-mono: 'JetBrains Mono', 'Fira Code', Consolas, monospace;
+
+  /* Font Weights */
+  --font-light: 300;
+  --font-normal: 400;
+  --font-medium: 500;
+  --font-semibold: 600;
+  --font-bold: 700;
+  --font-extrabold: 800;
+
+  /* Font Sizes */
+  --text-xs: 0.75rem;
+  --text-sm: 0.875rem;
+  --text-base: 1rem;
+  --text-lg: 1.125rem;
+  --text-xl: 1.25rem;
+  --text-2xl: 1.5rem;
+  --text-3xl: 1.875rem;
+  --text-4xl: 2.25rem;
+  --text-5xl: 3rem;
+  --text-6xl: 3.75rem;
+
+  /* Letter Spacing */
+  --tracking-tighter: -0.05em;
+  --tracking-tight: -0.025em;
+  --tracking-normal: 0;
+  --tracking-wide: 0.025em;
+  --tracking-wider: 0.05em;
+
+  /* === SPACING === */
+  --spacing-1: 0.25rem;
+  --spacing-2: 0.5rem;
+  --spacing-3: 0.75rem;
+  --spacing-4: 1rem;
+  --spacing-5: 1.25rem;
+  --spacing-6: 1.5rem;
+  --spacing-8: 2rem;
+  --spacing-10: 2.5rem;
+  --spacing-12: 3rem;
+  --spacing-16: 4rem;
+  --spacing-20: 5rem;
+  --spacing-24: 6rem;
+  --spacing-32: 8rem;
+
+  /* === BORDERS - Simplified, no 3D effects === */
+  --radius-sm: 0.25rem;
+  --radius-md: 0.375rem;
+  --radius-lg: 0.5rem;
+  --radius-xl: 0.75rem;
+  --radius-2xl: 1rem;
+  --radius-3xl: 1.5rem;
+  --radius-full: 9999px;
+
+  /* === SHADOWS - Minimal, flat design === */
+  --shadow-sm: none;
+  --shadow-md: none;
+  --shadow-lg: none;
+  --shadow-xl: none;
+  --shadow-2xl: none;
+  --shadow-inner: none;
+  --shadow-card: none;
+  --shadow-card-hover: none;
+
+  /* === Z-INDEX === */
+  --z-dropdown: 1000;
+  --z-sticky: 1020;
+  --z-fixed: 1030;
+  --z-modal-backdrop: 1040;
+  --z-modal: 1050;
+  --z-popover: 1060;
+  --z-tooltip: 1070;
+
+  /* === TRANSITIONS === */
+  --transition-fast: 0.15s ease;
+  --transition-normal: 0.3s ease;
+  --transition-slow: 0.5s ease;
+
+  /* === CONTAINERS === */
+  --container-sm: 640px;
+  --container-md: 768px;
+  --container-lg: 1024px;
+  --container-xl: 1280px;
+  --container-2xl: 1536px;
+
+  /* === THEME-AWARE COLORS (Light Mode Default) === */
+  --color-bg: #FFFFFF;
+  --color-bg-secondary: #f8fafc;
+  --color-bg-subtle: #f1f5f9;
+  --color-bg-muted: #e2e8f0;
+  --color-bg-accent: rgba(17, 82, 212, 0.05);
+
+  --color-surface: #FFFFFF;
+  --color-surface-hover: #f8fafc;
+
+  --color-text: #0f172a;
+  --color-text-secondary: #475569;
+  --color-text-muted: #64748b;
+  --color-text-on-accent: #1152d4;
+
+  --color-border: #e2e8f0;
+  --color-border-subtle: #f1f5f9;
+
+  /* Adaptive Section Backgrounds */
+  --section-bg-alt: var(--color-bg-secondary);
+  --section-bg-dark: #f8fafc;
+  --section-bg-accent: rgba(17, 82, 212, 0.05);
+}
+
+/* === DARK THEME === */
+[data-theme="dark"] {
+  /* Background Colors */
+  --color-bg: #0f0f0f;
+  --color-bg-secondary: #161b22;
+  --color-bg-subtle: #1a1f27;
+  --color-bg-muted: #21262d;
+  --color-bg-accent: rgba(17, 82, 212, 0.1);
+
+  --color-surface: #161b22;
+  --color-surface-hover: #1a1f27;
+
+  /* Text Colors */
+  --color-text: #FFFFFF;
+  --color-text-secondary: #94a3b8;
+  --color-text-muted: #64748b;
+  --color-text-on-accent: #FFFFFF;
+
+  /* Border */
+  --color-border: #282e39;
+  --color-border-subtle: #21262d;
+
+  /* Adaptive Section Backgrounds */
+  --section-bg-alt: #161b22;
+  --section-bg-dark: #0f0f0f;
+  --section-bg-accent: #0f172a;
+
+  /* Adjusted Gradients for Dark Mode */
+  --gradient-hero: linear-gradient(135deg, #0f0f0f 0%, #161b22 50%, #1a1f27 100%);
+  --gradient-light: linear-gradient(135deg, #161b22 0%, #1a1f27 100%);
+
+  /* Dark Mode Shadows */
+  --shadow-sm: none;
+  --shadow-md: none;
+  --shadow-lg: none;
+  --shadow-xl: none;
+  --shadow-2xl: none;
+  --shadow-card: none;
+  --shadow-card-hover: none;
+}
