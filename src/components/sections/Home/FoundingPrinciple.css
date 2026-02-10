@@ -1,0 +1,65 @@
+/* Founding Principle Section */
+.founding-principle-section {
+    padding: 100px 0;
+    background: var(--section-bg-dark);
+    position: relative;
+}
+
+.founding-content {
+    text-align: center;
+    max-width: 900px;
+    margin: 0 auto;
+}
+
+.founding-label {
+    display: inline-block;
+    font-size: 12px;
+    font-weight: 600;
+    letter-spacing: 3px;
+    color: #5a8fd8;
+    margin-bottom: 40px;
+}
+
+.founding-quote {
+    font-size: 2.2rem;
+    font-weight: 600;
+    font-style: italic;
+    color: var(--color-text);
+    line-height: 1.5;
+    margin: 0 0 50px 0;
+    quotes: none;
+}
+
+.founding-footer {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 20px;
+}
+
+.founding-line {
+    width: 60px;
+    height: 1px;
+    background: linear-gradient(90deg, transparent, #1152d4, transparent);
+}
+
+.founding-motive {
+    font-size: 11px;
+    font-weight: 500;
+    letter-spacing: 2px;
+    color: #64748b;
+}
+
+@media (max-width: 768px) {
+    .founding-principle-section {
+        padding: 60px 0;
+    }
+
+    .founding-quote {
+        font-size: 1.4rem;
+    }
+
+    .founding-line {
+        width: 30px;
+    }
+}

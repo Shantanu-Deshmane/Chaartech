@@ -1,0 +1,82 @@
+/* Why Choose Us Section - Home Page */
+.why-choose-home-section {
+    padding: 100px 0;
+    background: var(--section-bg-alt);
+}
+
+.section-header-center {
+    text-align: center;
+    margin-bottom: 60px;
+}
+
+.section-label-light {
+    display: inline-block;
+    font-size: 12px;
+    font-weight: 600;
+    color: #1152d4;
+    letter-spacing: 2px;
+    margin-bottom: 20px;
+}
+
+.section-title-light {
+    font-size: 2.5rem;
+    font-weight: 700;
+    color: var(--color-text);
+}
+
+.why-choose-home-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 30px;
+}
+
+.why-choose-home-item {
+    background: var(--color-bg-subtle);
+    border: 1px solid var(--color-border);
+    border-radius: 12px;
+    padding: 40px 30px;
+    text-align: center;
+    transition: border-color 0.3s;
+}
+
+.why-choose-home-item:hover {
+    border-color: #1152d4;
+}
+
+.why-choose-home-icon {
+    width: 60px;
+    height: 60px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: rgba(17, 82, 212, 0.1);
+    color: #1152d4;
+    border-radius: 12px;
+    margin: 0 auto 20px;
+}
+
+.why-choose-home-item h3 {
+    font-size: 1.1rem;
+    font-weight: 600;
+    color: var(--color-text);
+    margin-bottom: 12px;
+}
+
+.why-choose-home-item p {
+    font-size: 0.9rem;
+    color: var(--color-text-secondary);
+    line-height: 1.6;
+    margin: 0;
+}
+
+@media (max-width: 991px) {
+    .why-choose-home-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (max-width: 576px) {
+    .why-choose-home-grid {
+        grid-template-columns: 1fr;
+    }
+}

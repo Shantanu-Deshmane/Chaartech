@@ -1,258 +1,204 @@
 export const blogPosts = [
     {
         id: 1,
-        title: 'Why Your Business Needs a Professional Website in 2026',
-        slug: 'why-business-needs-professional-website-2026',
-        excerpt: 'In today\'s digital-first world, having a professional website is no longer optional. Learn why investing in your online presence is crucial for business success.',
+        title: 'The Future of React: What to Expect in 2024',
+        slug: 'future-of-react-2024',
+        excerpt: 'Dive deep into the upcoming features of React 19 and how Server Components are reshaping the landscape of modern web development architecture.',
         content: `
-## The Digital-First Reality
+## React 19 and Beyond
 
-In 2026, the first interaction most customers have with your business is online. Whether they find you through a Google search, social media, or word of mouth, their next step is almost always to visit your website.
+React continues to evolve, and 2024 brings some of the most exciting changes yet. From Server Components to the new compiler, let's explore what's coming.
 
-### Key Statistics
+### Server Components
 
-- **81% of consumers** research a business online before making a purchase decision
-- **75% of users** judge a company's credibility based on their website design
-- **57% of users** won't recommend a business with a poorly designed mobile site
+Server Components allow you to render components on the server, sending only the HTML to the client. This dramatically reduces bundle size and improves performance.
 
-## Why a Professional Website Matters
+**Key Benefits:**
+- Smaller client-side JavaScript bundles
+- Direct access to backend resources
+- Improved initial load performance
+- Better SEO out of the box
 
-### 1. First Impressions Count
+### The React Compiler
 
-You have approximately 0.05 seconds to make a first impression online. A professional, well-designed website instantly communicates that you're a legitimate, trustworthy business.
+The new React compiler automatically optimizes your code, eliminating the need for manual memoization with \`useMemo\`, \`useCallback\`, and \`React.memo\`.
 
-### 2. 24/7 Availability
+### Actions and Form Handling
 
-Unlike a physical store, your website works for you around the clock. Customers can learn about your services, read testimonials, and even make purchases at any time.
+React 19 introduces Actions — a new way to handle form submissions and mutations that works seamlessly with both client and server components.
 
-### 3. Credibility and Trust
+### What This Means for Developers
 
-A professional website with clear information, customer testimonials, and secure payment options builds trust with potential customers.
+1. **Less boilerplate** — The compiler handles optimization
+2. **Better performance** — Server Components reduce client load
+3. **Simpler data fetching** — Built-in patterns for async operations
+4. **Progressive enhancement** — Forms work without JavaScript
 
-### 4. Competitive Advantage
+## How ChaarTech is Preparing
 
-If your competitors have professional websites and you don't, you're already at a disadvantage. A great website helps you stand out and capture market share.
+At ChaarTech, we're already adopting these patterns in our projects. Our team stays ahead of the curve so our clients benefit from the latest innovations.
 
-## What Makes a Website "Professional"?
-
-- **Modern, clean design** that reflects your brand
-- **Mobile responsiveness** for all device sizes
-- **Fast loading speeds** (under 3 seconds)
-- **Clear navigation** and user-friendly interface
-- **Quality content** that addresses customer needs
-- **Strong calls-to-action** that guide visitors
-
-## The ROI of Investing in Your Website
-
-Think of your website as your hardest-working employee. It:
-- Generates leads while you sleep
-- Answers common questions automatically
-- Showcases your work and builds credibility
-- Scales infinitely without additional cost
-
-## Ready to Build Your Online Presence?
-
-At ChaarTech, we specialize in creating professional, high-converting websites for businesses of all sizes. Whether you need a simple landing page or a complex e-commerce platform, we can help.
-
-Contact us today to discuss your project!
+Contact us to build your next React project with cutting-edge technology!
         `,
-        category: 'Business',
         author: 'ChaarTech Team',
-        date: '2026-02-01',
-        readTime: 5,
-        image: 'https://images.unsplash.com/photo-1467232004584-a241de8bcf5d?auto=format&fit=crop&w=800&q=80',
-        tags: ['Website', 'Business', 'Digital Transformation']
+        date: '2024-10-24',
+        readTime: 8,
+        image: 'https://lh3.googleusercontent.com/aida-public/AB6AXuBkDbVCTroGbl9kF0z4259ibUV_wvFU1agw-tgITPW9fBI-K8uRCQMk390kaTKbXR3rSBeYRpz44GEhs5e6ZdxubbYKCUFOquG9EQ7SDJOXFGtCDRL_szlbWlbAmgHg0sNyI9bjtizPgPhv-KvbvJ3yvM73b_rm_s7eYD-yAEpuUPJ5GlkyQ-dbJkljPDX4G_3RD5qACjt6zGDde-F_ocYkgbZ52lAs-vqsmc3zufiql3TN-Wn0eB5WA1hcbP9VBZgqV8tl-mditjXg',
+        tags: ['React', 'JavaScript', 'Web Development']
     },
     {
         id: 2,
-        title: 'Top 10 SEO Strategies for Small Businesses',
-        slug: 'top-10-seo-strategies-small-businesses',
-        excerpt: 'Discover proven SEO techniques that can help your small business rank higher on Google and attract more organic traffic.',
+        title: 'Mastering Modern UI Workflows',
+        slug: 'mastering-modern-ui-workflows',
+        excerpt: 'Efficiency is key in product design. Learn how our design team at ChaarTech leverages atomic design systems to speed up production by 40%.',
         content: `
-## Why SEO Matters for Small Businesses
+## Why Design Systems Matter
 
-Search Engine Optimization (SEO) is one of the most cost-effective marketing strategies available to small businesses. Unlike paid advertising, the benefits of SEO compound over time, delivering increasingly better results.
+In the fast-paced world of product design, consistency and speed are everything. A well-built design system can dramatically improve your team's output.
 
-## The Top 10 SEO Strategies
+### Atomic Design Methodology
 
-### 1. Optimize for Local Search
+We follow Brad Frost's Atomic Design methodology, breaking interfaces into five levels:
 
-For small businesses, local SEO is crucial. Claim and optimize your Google Business Profile with accurate information, photos, and regular updates.
+1. **Atoms** — Basic HTML elements (buttons, inputs, labels)
+2. **Molecules** — Simple groups of atoms (search bar, form field)
+3. **Organisms** — Complex components (navigation, hero sections)
+4. **Templates** — Page-level layouts
+5. **Pages** — Specific instances of templates
 
-**Action Items:**
-- Claim your Google Business Profile
-- Ensure NAP (Name, Address, Phone) consistency across all platforms
-- Encourage customer reviews
+### Our Workflow
 
-### 2. Focus on Long-Tail Keywords
+**Step 1: Design Tokens**
+We start by defining tokens — colors, spacing, typography, and border radii that form the foundation.
 
-Instead of competing for broad terms like "restaurant," target specific phrases like "best Italian restaurant in [your city]."
+**Step 2: Component Library**
+Using Figma, we build a component library that mirrors our code components exactly.
 
-### 3. Create Quality Content
+**Step 3: Handoff**
+With design tokens synced between Figma and code, handoff becomes seamless.
 
-Content is still king. Create helpful blog posts, guides, and resources that answer your customers' questions.
+### Results at ChaarTech
 
-### 4. Optimize Page Speed
+- **40% faster production** with reusable components
+- **90% fewer design inconsistencies** across projects
+- **Onboarding time reduced by half** for new team members
 
-Google uses page speed as a ranking factor. Ensure your website loads in under 3 seconds.
+## Build Better, Faster
 
-**Quick Wins:**
-- Compress images
-- Enable browser caching
-- Use a Content Delivery Network (CDN)
-
-### 5. Mobile-First Design
-
-With over 60% of searches happening on mobile devices, your website must be mobile-friendly.
-
-### 6. Build Quality Backlinks
-
-Earn links from reputable local websites, industry publications, and partners. Quality matters more than quantity.
-
-### 7. Optimize On-Page Elements
-
-Ensure each page has:
-- Unique, keyword-rich title tags (under 60 characters)
-- Compelling meta descriptions (under 160 characters)
-- Proper heading hierarchy (H1, H2, H3)
-- Alt text for images
-
-### 8. Use Schema Markup
-
-Implement structured data to help search engines understand your content and potentially earn rich snippets in search results.
-
-### 9. Monitor and Analyze
-
-Use tools like Google Analytics and Google Search Console to track your performance and identify opportunities.
-
-### 10. Stay Consistent
-
-SEO is a marathon, not a sprint. Consistent effort over months and years delivers the best results.
-
-## Common SEO Mistakes to Avoid
-
-- Keyword stuffing
-- Ignoring mobile users
-- Neglecting technical SEO
-- Expecting overnight results
-- Not tracking metrics
-
-## Need Help with Your SEO?
-
-At ChaarTech, we offer comprehensive SEO services tailored for small businesses. From technical audits to content strategy, we can help you rank higher and attract more customers.
+Whether you're a startup or an enterprise, a design system pays dividends. Let ChaarTech help you build one that scales.
         `,
-        category: 'SEO',
         author: 'ChaarTech Team',
-        date: '2026-02-05',
-        readTime: 8,
-        image: 'https://images.unsplash.com/photo-1572177191856-3cde618dee1f?auto=format&fit=crop&w=800&q=80',
-        tags: ['SEO', 'Small Business', 'Marketing']
+        date: '2024-10-20',
+        readTime: 5,
+        image: 'https://lh3.googleusercontent.com/aida-public/AB6AXuB-y96V4egf7SYHBEIrfh9yKQXQAgQ7SKjmbWWMV1q4oiKvGOnUfNkdPuooJKSE4rbBbsQO_2e2Tz8ElxPZOX2VASiqwBr9zCC2z6bk7NC3VSYYfCtB9QipAdbwoMkj8AihnNFCd5ml6jLqJ9Gx40fSGpuaRpXBwrxAe_vNxcsEqsP1Tq6CDCpYiNk67GKk4JU-L7iaMTN3Diy7in-a8HODNCEiK3cLMpZLqFp8s4u7BuT0UGe49DqdtYLac9BxFqj1Z9WcrjborIa1',
+        tags: ['UI Design', 'Design Systems', 'Figma']
     },
     {
         id: 3,
-        title: 'Mobile App vs. Website: Which Does Your Business Need?',
-        slug: 'mobile-app-vs-website-business-need',
-        excerpt: 'Confused about whether to build a mobile app or a website? We break down the pros and cons to help you make the right decision.',
+        title: 'Generative AI: Beyond the Hype Cycle',
+        slug: 'generative-ai-beyond-hype-cycle',
+        excerpt: 'We explore practical applications of LLMs in enterprise software and how to mitigate common risks like data privacy and model hallucination.',
         content: `
-## The Big Question
+## Separating Hype from Reality
 
-One of the most common questions we hear from businesses is: "Should I build a mobile app or a website?" The answer depends on your specific goals, audience, and budget.
+Generative AI has dominated tech headlines, but beyond the buzz, there are real, practical applications transforming how businesses operate.
 
-## Understanding the Differences
+### Where AI Actually Delivers Value
 
-### Websites
+**1. Customer Support Automation**
+AI chatbots can handle 60-80% of routine support queries, freeing human agents for complex issues.
 
-A website is accessible through any web browser on any device. Modern responsive websites work well on desktops, tablets, and smartphones.
+**2. Content Generation at Scale**
+From product descriptions to marketing copy, AI can generate first drafts that humans then refine.
 
-**Pros:**
-- Lower development cost
-- Easier to maintain and update
-- Accessible to anyone with a browser
-- Better for SEO and discoverability
-- No app store approval process
+**3. Code Assistance**
+Tools like GitHub Copilot and Cursor are genuinely improving developer productivity by 25-40%.
 
-**Cons:**
-- Limited access to device features
-- Requires internet connection
-- Can't send push notifications (without PWA)
+**4. Data Analysis & Insights**
+LLMs can analyze unstructured data — reviews, feedback, documents — and extract actionable insights.
 
-### Mobile Apps
+### The Risks You Need to Know
 
-Native or hybrid apps are installed directly on users' devices and can access native features like cameras, GPS, and push notifications.
+- **Hallucination** — AI can generate convincing but incorrect information
+- **Data Privacy** — Sensitive data sent to AI models may not stay private
+- **Bias** — Models can perpetuate biases present in training data
+- **Over-reliance** — Teams may stop thinking critically
 
-**Pros:**
-- Better performance and user experience
-- Access to device features
-- Works offline (with proper design)
-- Push notifications for engagement
-- Can appear on app store searches
+### How to Implement AI Responsibly
 
-**Cons:**
-- Higher development cost (often need iOS + Android)
-- Requires app store approval
-- Users must download and install
-- Ongoing maintenance for OS updates
+1. **Start small** — Pick one well-defined use case
+2. **Keep humans in the loop** — AI augments, not replaces
+3. **Audit outputs** — Regularly check for accuracy and bias
+4. **Protect data** — Use on-premise or privacy-focused models for sensitive data
 
-## When to Choose a Website
+## ChaarTech's AI Integration Services
 
-A website is usually the right choice when:
-
-1. **You're starting out** and need an affordable online presence
-2. **Your goal is visibility** and attracting new customers through search
-3. **You need to share information** that doesn't require device features
-4. **Your audience is broad** and not tech-savvy enough to download apps
-5. **Your budget is limited** and you need the most bang for your buck
-
-## When to Choose a Mobile App
-
-A mobile app makes sense when:
-
-1. **You need native features** like camera, GPS, or sensors
-2. **Offline functionality** is essential
-3. **You want to increase engagement** through push notifications
-4. **Your users will use it frequently** (daily or weekly)
-5. **You're building a product** rather than a marketing tool
-
-## The Best of Both Worlds: Progressive Web Apps
-
-Progressive Web Apps (PWAs) combine the best features of websites and apps:
-
-- Installable on home screen
-- Work offline
-- Can send push notifications
-- No app store required
-- Single codebase for all platforms
-
-## Our Recommendation
-
-For most businesses just starting their digital journey, we recommend:
-
-1. **Start with a professional website** - Establish your online presence
-2. **Consider a PWA** if you need app-like features on a budget
-3. **Build a native app** when you have a proven concept and loyal user base
-
-## Let Us Help You Decide
-
-At ChaarTech, we've helped dozens of businesses make this decision. We'll analyze your specific needs and recommend the best approach for your situation.
-
-Contact us for a free consultation!
+We help businesses integrate AI tools thoughtfully and effectively. From chatbot implementation to custom LLM fine-tuning, we've got you covered.
         `,
-        category: 'Technology',
         author: 'ChaarTech Team',
-        date: '2026-02-07',
-        readTime: 6,
-        image: 'https://images.unsplash.com/photo-1526406915802-7c63c2936798?auto=format&fit=crop&w=800&q=80',
-        tags: ['Mobile App', 'Website', 'Strategy']
-    }
-];
+        date: '2024-10-15',
+        readTime: 12,
+        image: 'https://lh3.googleusercontent.com/aida-public/AB6AXuAbaFSd4XWThofwwuBf393KhOSQJIoKPsl62RD3iN6Ac4To68aF5mZDlnMiGgVDWOD3WH9K1mbdakLEWfVxbbkCBDJsvq3m9ddZWlzXBi9d4ucXTlTlF8kMK3r7PSPzmWcWKiI_aDgFsrKw_jb4wNML5m_23Osiop15cZZ6dwp3tgj5GsDBzKLS18XLbGqFbcJVXryInTKep3qWFqOl2udz8Qc48qY6wOsIfh5qi0rBhFh71lXKpEkdHEuM_83KTAFYLCiL3peotoOw',
+        tags: ['Artificial Intelligence', 'LLM', 'Enterprise']
+    },
+    {
+        id: 4,
+        title: 'Optimizing Multi-Cloud Performance',
+        slug: 'optimizing-multi-cloud-performance',
+        excerpt: 'A comprehensive guide to managing distributed workloads across AWS and Azure while maintaining low latency and high availability.',
+        content: `
+## Why Multi-Cloud?
 
-export const blogCategories = [
-    { id: 'all', label: 'All Posts' },
-    { id: 'business', label: 'Business' },
-    { id: 'technology', label: 'Technology' },
-    { id: 'seo', label: 'SEO' },
-    { id: 'marketing', label: 'Marketing' },
-    { id: 'design', label: 'Design' }
+Organizations are increasingly adopting multi-cloud strategies to avoid vendor lock-in, improve resilience, and leverage the best services from each provider.
+
+### The Challenge
+
+Managing workloads across multiple cloud providers introduces complexity:
+
+- **Network latency** between clouds
+- **Data consistency** across regions
+- **Cost management** across platforms
+- **Security** and compliance alignment
+
+### Best Practices for Multi-Cloud
+
+**1. Use a Cloud-Agnostic Orchestration Layer**
+Tools like Kubernetes and Terraform allow you to manage infrastructure across providers with a single configuration.
+
+**2. Implement Intelligent Load Balancing**
+Use global load balancers that route traffic to the nearest or healthiest endpoint, regardless of which cloud it's on.
+
+**3. Optimize Data Placement**
+Keep data close to where it's processed. Use replication strategies that balance consistency with performance.
+
+**4. Unified Monitoring**
+Deploy monitoring solutions that provide a single pane of glass across all your cloud environments.
+
+### Cost Optimization Tips
+
+- **Right-size instances** — Don't overpay for unused capacity
+- **Use spot/preemptible instances** for non-critical workloads
+- **Implement auto-scaling** to match demand
+- **Reserved instances** for predictable baseline workloads
+
+### Performance Benchmarks
+
+| Metric | Single Cloud | Multi-Cloud (Optimized) |
+|--------|-------------|------------------------|
+| Availability | 99.9% | 99.99% |
+| Failover Time | 5-15 min | < 30 sec |
+| Latency (P95) | 120ms | 45ms |
+
+## ChaarTech Cloud Services
+
+We design, deploy, and manage multi-cloud architectures that deliver on performance, reliability, and cost efficiency. Let us optimize your cloud infrastructure.
+        `,
+        author: 'ChaarTech Team',
+        date: '2024-10-12',
+        readTime: 10,
+        image: 'https://lh3.googleusercontent.com/aida-public/AB6AXuBAwyttxI3aeq4FZ_ETDWV0FmnQXsmP_25Q6G4W1MwfTYtqETRyYcLRVPukH3qX_8SEBR50ny1SOFlaJADNqPCwbDNr9X5Ogt1A4Z2ukiCckzmW93LgwERBNH49B8Iv138c2DpoBHbXOURHlVkdWYQJ8zh6ITyUtSJzrK8Evy9Yb2LwPHZxPkd-tmXJyHBnHjhiMg48uOfEn0vR7qdhP_AX9oKhrYB2KYJwRaBMsw9HuAwkxVT2rEcKhu2e9j6kxNSbeeVfWQX7bEZf',
+        tags: ['Cloud', 'AWS', 'Azure', 'DevOps']
+    }
 ];
 
 export const getBlogBySlug = (slug) => {

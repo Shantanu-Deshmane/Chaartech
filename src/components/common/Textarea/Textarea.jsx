@@ -1,4 +1,4 @@
-import { forwardRef } from 'react';
+import { forwardRef, useId } from 'react';
 import { cn } from '../../../utils/helpers';
 import './Textarea.css';
 
@@ -23,7 +23,8 @@ const Textarea = forwardRef(({
     name,
     ...props
 }, ref) => {
-    const textareaId = id || name || `textarea-${Math.random().toString(36).substr(2, 9)}`;
+    const generatedId = useId();
+    const textareaId = id || generatedId;
 
     const wrapperClasses = cn(
         'textarea-wrapper',

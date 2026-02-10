@@ -1,0 +1,228 @@
+/* Methodology Section */
+.methodology-section {
+    padding: 120px 0;
+    position: relative;
+}
+
+.methodology-header {
+    text-align: center;
+    max-width: 800px;
+    margin: 0 auto 100px;
+}
+
+.methodology-title {
+    font-size: 3rem;
+    font-weight: 700;
+    margin-bottom: 20px;
+}
+
+.italic-text {
+    font-style: italic;
+    font-weight: 400;
+}
+
+.methodology-subtitle {
+    font-size: 1.1rem;
+    color: #94a3b8;
+    line-height: 1.6;
+}
+
+.methodology-steps {
+    position: relative;
+    max-width: 1100px;
+    margin: 60px auto 0;
+    padding: 60px 0;
+}
+
+.methodology-steps::before {
+    content: '';
+    position: absolute;
+    left: 50%;
+    top: 0;
+    bottom: 0;
+    width: 2px;
+    background: linear-gradient(to bottom,
+            transparent,
+            rgba(17, 82, 212, 0.2) 10%,
+            rgba(17, 82, 212, 0.2) 90%,
+            transparent);
+    transform: translateX(-50%);
+}
+
+.methodology-step {
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+    margin-bottom: 120px;
+    z-index: 1;
+}
+
+.methodology-step:last-child {
+    margin-bottom: 0;
+}
+
+.step-content,
+.step-visual {
+    width: 42%;
+    position: relative;
+}
+
+.methodology-step:nth-child(even) {
+    flex-direction: row-reverse;
+}
+
+.methodology-step:nth-child(odd) .step-content {
+    text-align: right;
+}
+
+.methodology-step:nth-child(even) .step-content {
+    text-align: left;
+}
+
+.step-marker {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    width: 54px;
+    height: 54px;
+    background: var(--color-bg);
+    border: 2px solid #1152d4;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 10;
+    color: #1152d4;
+    box-shadow: 0 0 20px rgba(17, 82, 212, 0.2);
+    transition: all 0.3s ease;
+}
+
+.methodology-step:hover .step-marker {
+    background: #1152d4;
+    color: #ffffff;
+    box-shadow: 0 0 30px rgba(17, 82, 212, 0.5);
+    transform: translate(-50%, -50%) scale(1.1);
+}
+
+.step-number-floating {
+    font-size: 0.85rem;
+    font-weight: 700;
+    color: #1152d4;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    margin-bottom: 12px;
+    display: block;
+}
+
+.step-content h3 {
+    font-size: 1.8rem;
+    font-weight: 700;
+    color: var(--color-text);
+    margin-bottom: 20px;
+}
+
+.step-description {
+    font-size: 1rem;
+    line-height: 1.8;
+    color: var(--color-text-secondary);
+}
+
+.step-visual {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.step-visual-box {
+    width: 100%;
+    max-width: 400px;
+    height: 200px;
+    background: var(--color-bg-secondary);
+    border: 1px solid var(--color-border);
+    border-radius: 12px;
+    position: relative;
+    overflow: hidden;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+}
+
+.visual-bar {
+    position: absolute;
+    top: 50%;
+    left: 20%;
+    width: 40%;
+    height: 4px;
+    background: rgba(17, 82, 212, 0.4);
+    border-radius: 2px;
+}
+
+.visual-dot {
+    position: absolute;
+    top: 50%;
+    left: 70%;
+    width: 12px;
+    height: 12px;
+    background: #1152d4;
+    border-radius: 50%;
+    transform: translateY(-50%);
+    box-shadow: 0 0 15px rgba(17, 82, 212, 0.6);
+}
+
+.step-bg-number {
+    position: absolute;
+    font-size: 15rem;
+    font-weight: 900;
+    color: rgba(255, 255, 255, 0.015);
+    top: 50%;
+    transform: translateY(-50%);
+    z-index: -1;
+    pointer-events: none;
+}
+
+.methodology-step:nth-child(odd) .step-bg-number {
+    right: 10%;
+}
+
+.methodology-step:nth-child(even) .step-bg-number {
+    left: 10%;
+}
+
+@media (max-width: 991px) {
+    .methodology-steps::before {
+        left: 30px;
+    }
+
+    .methodology-step {
+        flex-direction: column !important;
+        align-items: flex-start;
+        padding-left: 80px;
+        margin-bottom: 80px;
+        text-align: left !important;
+    }
+
+    .step-content,
+    .step-visual {
+        width: 100%;
+        text-align: left !important;
+    }
+
+    .step-marker {
+        left: 30px;
+        top: 0;
+        transform: translateX(-50%);
+    }
+
+    .methodology-step:hover .step-marker {
+        transform: translateX(-50%) scale(1.1);
+    }
+
+    .step-visual {
+        margin-top: 40px;
+    }
+
+    .step-bg-number {
+        display: none;
+    }
+}

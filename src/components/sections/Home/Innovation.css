@@ -1,0 +1,140 @@
+/* Innovation Section */
+.innovation-section {
+    padding: 120px 0;
+    background: var(--section-bg-dark);
+}
+
+.innovation-grid {
+    display: flex;
+    gap: 80px;
+}
+
+.innovation-sidebar {
+    width: 350px;
+    position: sticky;
+    top: 100px;
+    height: fit-content;
+}
+
+.sidebar-label {
+    font-size: 12px;
+    font-weight: 600;
+    color: var(--color-primary);
+    letter-spacing: 2px;
+    margin-bottom: 20px;
+    display: block;
+}
+
+.innovation-title {
+    font-size: 3rem;
+    font-weight: 700;
+    margin-bottom: 30px;
+    line-height: 1.1;
+    color: var(--color-text);
+}
+
+.innovation-description {
+    font-size: 1.1rem;
+    color: var(--color-text-secondary);
+    line-height: 1.8;
+    margin-bottom: 40px;
+}
+
+.innovation-link {
+    color: var(--color-primary);
+    text-decoration: none;
+    font-size: 14px;
+    font-weight: 600;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    transition: gap 0.2s ease;
+}
+
+.innovation-link:hover {
+    gap: 14px;
+}
+
+.innovation-cards {
+    flex: 1;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px;
+}
+
+/* Card — Dark mode default */
+.innovation-card {
+    background: rgba(255, 255, 255, 0.03);
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    padding: 40px;
+    border-radius: 12px;
+    transition: all 0.3s ease;
+}
+
+/* Card — Light mode: solid white card with subtle shadow */
+[data-theme="light"] .innovation-card {
+    background: #ffffff;
+    border: 1px solid rgba(0, 0, 0, 0.08);
+    box-shadow: 0 2px 12px rgba(0, 0, 0, 0.04);
+}
+
+.innovation-card:hover {
+    border-color: var(--color-primary);
+    background: rgba(17, 82, 212, 0.05);
+    transform: translateY(-5px);
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+}
+
+[data-theme="light"] .innovation-card:hover {
+    background: rgba(17, 82, 212, 0.03);
+    box-shadow: 0 12px 32px rgba(17, 82, 212, 0.1);
+}
+
+.card-icon {
+    width: 50px;
+    height: 50px;
+    background: rgba(17, 82, 212, 0.1);
+    color: var(--color-primary);
+    border-radius: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 25px;
+    transition: background 0.3s;
+}
+
+[data-theme="light"] .card-icon {
+    background: var(--color-primary);
+    color: #1152d4;
+}
+
+.card-title {
+    font-size: 1.4rem;
+    font-weight: 600;
+    margin-bottom: 15px;
+    color: var(--color-text);
+}
+
+.card-description {
+    font-size: 0.95rem;
+    line-height: 1.6;
+    color: var(--color-text-secondary);
+}
+
+@media (max-width: 991px) {
+    .innovation-grid {
+        flex-direction: column;
+        gap: 40px;
+    }
+
+    .innovation-sidebar {
+        width: 100%;
+        position: static;
+    }
+
+    .innovation-cards {
+        grid-template-columns: 1fr;
+    }
+}

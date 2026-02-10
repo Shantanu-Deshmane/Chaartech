@@ -142,12 +142,7 @@ export const processSteps = [
         title: 'Launch',
         description: 'We deploy your solution and provide training to ensure a smooth launch.'
     },
-    {
-        step: 6,
-        icon: TrendingUp,
-        title: 'Growth',
-        description: 'Post-launch support, analytics, and optimization to help your business grow continuously.'
-    }
+
 ];
 
 export const homeMethodology = [

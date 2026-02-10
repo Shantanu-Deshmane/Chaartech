@@ -1,0 +1,70 @@
+/* CTA Section — Full Width Blue */
+.cta-final {
+    padding: 0;
+    text-align: center;
+    background: var(--color-primary);
+    color: #ffffff;
+}
+
+[data-theme="dark"] .cta-final {
+    background: var(--color-primary);
+}
+
+.cta-final-content {
+    padding: 80px 40px;
+    max-width: 900px;
+    margin: 0 auto;
+}
+
+.cta-final-title {
+    font-size: 2.8rem;
+    font-weight: 700;
+    margin-bottom: 40px;
+    line-height: 1.2;
+    color: #ffffff;
+}
+
+.cta-final-buttons {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+}
+
+/* Override button styles inside the blue CTA */
+.cta-final .btn-primary {
+    background: #ffffff;
+    color: var(--color-primary);
+    border-color: #ffffff;
+}
+
+.cta-final .btn-primary:hover:not(:disabled) {
+    background: rgba(255, 255, 255, 0.9);
+    color: var(--color-primary-dark);
+}
+
+.cta-final .btn-outline {
+    background: transparent;
+    border-color: rgba(255, 255, 255, 0.6);
+    color: #ffffff;
+}
+
+.cta-final .btn-outline:hover:not(:disabled) {
+    background: #ffffff;
+    border-color: #ffffff;
+    color: var(--color-primary);
+}
+
+@media (max-width: 768px) {
+    .cta-final-content {
+        padding: 60px 24px;
+    }
+
+    .cta-final-title {
+        font-size: 1.8rem;
+    }
+
+    .cta-final-buttons {
+        flex-direction: column;
+        gap: 14px;
+    }
+}

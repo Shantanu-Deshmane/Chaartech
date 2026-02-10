@@ -1,0 +1,232 @@
+/* Testimonials Section — Scrambled Overlapping Cards */
+.testimonials-section {
+    padding: 80px 0;
+    background: #0a0a0a;
+    overflow: hidden;
+}
+
+[data-theme="light"] .testimonials-section {
+    background: #0a0a0a;
+}
+
+/* Header */
+.testimonials-header {
+    text-align: center;
+    margin-bottom: 8px;
+}
+
+.testimonials-title {
+    font-size: 2.5rem;
+    font-weight: 700;
+    color: #ffffff;
+    margin-bottom: 10px;
+}
+
+.testimonials-subtitle {
+    font-size: 0.95rem;
+    color: rgba(255, 255, 255, 0.45);
+}
+
+/* Absolute-positioned card container */
+.testimonials-cards-container {
+    position: relative;
+    height: 320px;
+    margin-top: 40px;
+}
+
+/* Individual Card */
+.testimonial-card {
+    position: absolute;
+    width: 300px;
+    border-radius: 14px;
+    padding: 24px;
+    cursor: pointer;
+    transition: all 0.3s ease-out;
+    display: flex;
+    flex-direction: column;
+}
+
+/* Dark Cards (1st, 3rd, 5th) */
+.card-dark {
+    background: rgba(30, 30, 30, 0.85);
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
+    border: 1px solid rgba(255, 255, 255, 0.08);
+    color: #ffffff;
+}
+
+/* Blue Cards (2nd, 4th) */
+.card-blue {
+    background: rgba(17, 82, 212, 0.85);
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
+    border: 1px solid rgba(255, 255, 255, 0.15);
+    color: #ffffff;
+}
+
+/* Quote Icon */
+.card-quote-icon {
+    color: rgba(255, 255, 255, 0.25);
+    margin-bottom: 12px;
+}
+
+.card-blue .card-quote-icon {
+    color: rgba(255, 255, 255, 0.4);
+}
+
+/* Stars */
+.card-stars {
+    display: flex;
+    gap: 2px;
+    margin-bottom: 10px;
+}
+
+.star-filled {
+    color: var(--color-primary);
+}
+
+.card-blue .star-filled {
+    color: #ffffff;
+}
+
+.star-empty {
+    color: rgba(255, 255, 255, 0.2);
+}
+
+/* Review Text */
+.card-review {
+    font-size: 0.88rem;
+    line-height: 1.55;
+    color: rgba(255, 255, 255, 0.85);
+    margin-bottom: 16px;
+    flex: 1;
+    display: -webkit-box;
+    -webkit-line-clamp: 3;
+    line-clamp: 3;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+}
+
+.card-review-expanded {
+    -webkit-line-clamp: unset;
+    line-clamp: unset;
+    overflow: visible;
+}
+
+.card-blue .card-review {
+    color: rgba(255, 255, 255, 0.92);
+}
+
+/* Reviewer Footer */
+.card-reviewer {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin-top: auto;
+}
+
+/* Avatar Circle */
+.reviewer-avatar {
+    width: 38px;
+    height: 38px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 0.75rem;
+    font-weight: 700;
+    flex-shrink: 0;
+}
+
+.avatar-on-dark {
+    background: var(--color-primary);
+    color: #ffffff;
+}
+
+.avatar-on-blue {
+    background: rgba(255, 255, 255, 0.2);
+    color: #ffffff;
+}
+
+/* Name and Role */
+.reviewer-name {
+    font-size: 0.85rem;
+    font-weight: 600;
+    color: #ffffff;
+    margin: 0;
+}
+
+.reviewer-role {
+    font-size: 0.75rem;
+    color: rgba(255, 255, 255, 0.55);
+    margin: 0;
+}
+
+.card-blue .reviewer-role {
+    color: rgba(255, 255, 255, 0.7);
+}
+
+/* Responsive */
+@media (max-width: 1200px) {
+    .testimonial-card {
+        width: 260px;
+        padding: 20px;
+    }
+
+    .testimonials-cards-container {
+        height: 300px;
+    }
+}
+
+@media (max-width: 991px) {
+    .testimonials-section {
+        padding: 60px 0;
+    }
+
+    .testimonials-cards-container {
+        height: auto;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 20px;
+    }
+
+    .testimonial-card {
+        position: relative !important;
+        left: auto !important;
+        top: auto !important;
+        transform: none !important;
+        width: 300px;
+        min-height: 260px;
+    }
+
+    .testimonial-card:hover {
+        transform: scale(1.03) !important;
+    }
+
+    .testimonials-title {
+        font-size: 2rem;
+    }
+
+    .card-review {
+        -webkit-line-clamp: unset;
+        line-clamp: unset;
+        overflow: visible;
+    }
+}
+
+@media (max-width: 480px) {
+    .testimonials-cards-container {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .testimonial-card {
+        width: 100%;
+        max-width: 340px;
+    }
+
+    .testimonials-title {
+        font-size: 1.6rem;
+    }
+}

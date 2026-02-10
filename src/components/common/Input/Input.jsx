@@ -1,4 +1,4 @@
-import { forwardRef, useState } from 'react';
+import { forwardRef, useState, useId } from 'react';
 import { Eye, EyeOff } from 'lucide-react';
 import { cn } from '../../../utils/helpers';
 import './Input.css';
@@ -26,7 +26,8 @@ const Input = forwardRef(({
     ...props
 }, ref) => {
     const [showPassword, setShowPassword] = useState(false);
-    const inputId = id || name || `input-${Math.random().toString(36).substr(2, 9)}`;
+    const generatedId = useId();
+    const inputId = id || generatedId;
 
     const isPassword = type === 'password';
     const inputType = isPassword && showPassword ? 'text' : type;

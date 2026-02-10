@@ -1,0 +1,9 @@
+export { default as Hero } from './Hero';
+export { default as WhyChooseUs } from './WhyChooseUs';
+export { default as Methodology } from './Methodology';
+export { default as FoundingPrinciple } from './FoundingPrinciple';
+export { default as Innovation } from './Innovation';
+export { default as Testimonials } from './Testimonials';
+export { default as HomeCTA } from './HomeCTA';
+export { default as TechStackMarquee } from './TechStackMarquee';
+export { default as HowItWorks } from './HowItWorks';

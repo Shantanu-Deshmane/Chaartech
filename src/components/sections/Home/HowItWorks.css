@@ -1,0 +1,207 @@
+/* How It Works — Tabbed Section */
+.hiw-section {
+    padding: 100px 0;
+    background: var(--color-bg);
+    transition: background-color 0.3s ease;
+}
+
+/* Header */
+.hiw-header {
+    text-align: center;
+    margin-bottom: 16px;
+}
+
+.hiw-title {
+    font-size: 2.5rem;
+    font-weight: 700;
+    color: var(--color-text);
+    margin-bottom: 12px;
+}
+
+.hiw-description {
+    font-size: 1rem;
+    color: var(--color-text-muted);
+    margin-bottom: 32px;
+}
+
+/* Toggle Buttons */
+.hiw-toggle {
+    display: inline-flex;
+    border-radius: 10px;
+    border: 1px solid var(--color-border);
+    overflow: hidden;
+    background: var(--color-bg-secondary);
+}
+
+.hiw-toggle-btn {
+    padding: 10px 28px;
+    font-size: 0.9rem;
+    font-weight: 600;
+    cursor: pointer;
+    border: none;
+    background: transparent;
+    color: var(--color-text-muted);
+    transition: all 0.3s ease;
+    font-family: inherit;
+}
+
+.hiw-toggle-btn:hover {
+    color: var(--color-text);
+    background: var(--color-bg-subtle);
+}
+
+.hiw-toggle-btn.active {
+    background: var(--color-primary);
+    color: #ffffff;
+}
+
+/* Subtitle */
+.hiw-subtitle {
+    font-size: 1.35rem;
+    font-weight: 600;
+    color: var(--color-text);
+    text-align: center;
+    margin-bottom: 60px;
+    margin-top: 40px;
+}
+
+/* Steps Grid */
+.hiw-steps-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 32px;
+    max-width: 1100px;
+    margin: 0 auto;
+}
+
+/* Individual Step */
+.hiw-step {
+    position: relative;
+}
+
+.hiw-step-inner {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+}
+
+/* Connector Line */
+.hiw-connector {
+    display: none;
+    position: absolute;
+    top: 48px;
+    left: 60%;
+    width: 80%;
+    height: 2px;
+    background: var(--color-border);
+}
+
+@media (min-width: 1025px) {
+    .hiw-connector {
+        display: block;
+    }
+}
+
+/* Icon Circle — Outer ring */
+.hiw-icon-outer {
+    width: 96px;
+    height: 96px;
+    border-radius: 50%;
+    border: 2px solid rgba(var(--color-primary-rgb), 0.25);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 20px;
+    background: var(--color-bg);
+    position: relative;
+}
+
+/* Icon Circle — Inner filled */
+.hiw-icon-inner {
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+    background: linear-gradient(135deg, var(--color-primary), var(--color-primary-light));
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0 8px 24px rgba(var(--color-primary-rgb), 0.3);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.hiw-step:hover .hiw-icon-inner {
+    transform: scale(1.08);
+    box-shadow: 0 12px 32px rgba(var(--color-primary-rgb), 0.4);
+}
+
+/* SVG Icon */
+.hiw-svg-icon {
+    width: 36px;
+    height: 36px;
+}
+
+.hiw-svg-icon circle[fill],
+.hiw-svg-icon rect[fill],
+.hiw-svg-icon path[fill] {
+    transition: fill 0.3s ease;
+}
+
+/* Override SVG strokes within the gradient circle to white */
+.hiw-icon-inner .hiw-svg-icon {
+    --color-primary: #ffffff;
+}
+
+/* Step Title */
+.hiw-step-title {
+    font-size: 1.05rem;
+    font-weight: 700;
+    color: var(--color-text);
+    margin-bottom: 10px;
+}
+
+/* Step Description */
+.hiw-step-desc {
+    font-size: 0.9rem;
+    color: var(--color-text-secondary);
+    line-height: 1.65;
+    max-width: 240px;
+    margin: 0;
+}
+
+/* Responsive */
+@media (max-width: 1024px) {
+    .hiw-steps-grid {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 48px 32px;
+    }
+
+    .hiw-title {
+        font-size: 2rem;
+    }
+}
+
+@media (max-width: 640px) {
+    .hiw-section {
+        padding: 60px 0;
+    }
+
+    .hiw-steps-grid {
+        grid-template-columns: 1fr;
+        gap: 40px;
+        max-width: 360px;
+    }
+
+    .hiw-title {
+        font-size: 1.75rem;
+    }
+
+    .hiw-subtitle {
+        font-size: 1.1rem;
+    }
+
+    .hiw-toggle-btn {
+        padding: 8px 20px;
+        font-size: 0.85rem;
+    }
+}
