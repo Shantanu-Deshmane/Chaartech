@@ -358,7 +358,7 @@ const About = () => {
                         variants={ANIMATIONS.fadeInUp}
                     >
                         <span className="section-label">Our Team</span>
-                        <h2>Meet the Founders</h2>
+                        <h2>Brains Behind ChaarTech</h2>
                     </motion.div>
 
                     <motion.div

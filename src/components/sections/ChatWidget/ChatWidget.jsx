@@ -3,6 +3,7 @@ import { motion, AnimatePresence } from 'framer-motion';
 import { MessageCircle, X, Send, Bot, User, Sparkles } from 'lucide-react';
 import { COMPANY } from '../../../utils/constants';
 import { sendMessageToAI, getAIGreeting } from './chatService';
+import { getResponse } from './chatResponses';
 import './ChatWidget.css';
 
 /**
@@ -72,32 +73,45 @@ const ChatWidget = () => {
             // Send to AI service
             const response = await sendMessageToAI(updatedMessages);
 
+            let botResponseText = response.message;
+            let success = response.success;
+
+            // FALLBACK: If AI fails or key is missing, use keyword-based response
+            if (!success) {
+                console.log('AI Service unavailable, using keyword fallback...');
+                const fallback = getResponse(messageText);
+                botResponseText = fallback.text;
+            }
+
             setIsConnecting(false);
 
             // Simulate typing delay for natural feel
-            const typingDelay = Math.min(response.message.length * 10, 1500);
+            const typingDelay = Math.min(botResponseText.length * 10, 1500);
             await new Promise(resolve => setTimeout(resolve, typingDelay));
 
             // Add bot response
             const botMessage = {
                 id: generateId(),
                 sender: 'bot',
-                text: response.message,
+                text: botResponseText,
                 timestamp: new Date(),
-                quickReplies: response.success ? getContextQuickReplies(messageText) : ['Try again', 'Contact team']
+                quickReplies: getContextQuickReplies(messageText)
             };
 
             setMessages(prev => [...prev, botMessage]);
         } catch (error) {
             console.error('Chat error:', error);
 
-            // Add error message
+            // Final fallback
+            const fallback = getResponse(messageText);
+
+            // Add fallback response
             const errorMessage = {
                 id: generateId(),
                 sender: 'bot',
-                text: "Sorry, I encountered an error. Please try again or contact us directly at info@chaartech.in",
+                text: fallback.text,
                 timestamp: new Date(),
-                quickReplies: ['Try again', 'Contact info']
+                quickReplies: fallback.quickReplies || ['Try again', 'Contact info']
             };
             setMessages(prev => [...prev, errorMessage]);
         } finally {

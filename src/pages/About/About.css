@@ -284,7 +284,8 @@
 
 .about-hero-alt {
     padding: 80px 0;
-    background: var(--section-bg-dark);
+    background: var(--color-bg-secondary);
+    border-bottom: 1px solid var(--color-border);
 }
 
 .about-hero-bg {
@@ -301,13 +302,13 @@
 }
 
 .about-hero-content h1 {
-    color: var(--color-white);
+    color: var(--color-text);
     margin-bottom: var(--spacing-6);
 }
 
 .about-hero-content p {
     font-size: var(--text-xl);
-    color: var(--color-gray-light);
+    color: var(--color-text-secondary);
     margin: 0 0 var(--spacing-8);
 }
 
@@ -323,13 +324,19 @@
     display: flex;
     align-items: center;
     gap: var(--spacing-2);
-    color: var(--color-white);
+    color: var(--color-text);
     font-size: var(--text-sm);
     font-weight: var(--font-medium);
     padding: var(--spacing-3) var(--spacing-5);
-    background: rgba(17, 82, 212, 0.2);
-    border: 1px solid rgba(17, 82, 212, 0.4);
+    background: var(--color-bg-secondary);
+    border: 1px solid var(--color-border);
     border-radius: var(--radius-full);
+    transition: all var(--transition-normal);
+}
+
+.hero-service-item:hover {
+    border-color: var(--color-primary);
+    background: var(--color-bg-accent);
 }
 
 .hero-service-item svg {

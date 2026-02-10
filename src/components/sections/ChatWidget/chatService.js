@@ -14,8 +14,8 @@
  * - No credit card required!
  */
 
-// ⚠️ REPLACE THIS WITH YOUR ACTUAL API KEY
-const GEMINI_API_KEY = 'AIzaSyDWHmSmkuqmopE1eSxdJCpCeptn4PoqMEM';
+// ⚠️ Migration to environment variables
+const GEMINI_API_KEY = import.meta.env.VITE_GEMINI_API_KEY;
 
 const GEMINI_API_URL = 'https://generativelanguage.googleapis.com/v1/models/gemini-1.5-flash:generateContent';
 
@@ -80,11 +80,12 @@ const SYSTEM_PROMPT = `You are the friendly AI assistant for ChaarTech Technolog
  */
 export const sendMessageToAI = async (messages) => {
     // Check if API key is set
-    if (GEMINI_API_KEY === 'YOUR_GEMINI_API_KEY_HERE') {
+    if (!GEMINI_API_KEY || GEMINI_API_KEY === 'YOUR_GEMINI_API_KEY_HERE') {
         // Return helpful message if no API key
         return {
             success: false,
-            message: "🔑 AI chatbot not configured yet. Please add your Gemini API key to enable AI responses.\n\nIn the meantime, feel free to contact us directly at info@chaartech.in or +91 76669 64743!"
+            errorType: 'MISSING_KEY',
+            message: "🔑 AI chatbot not configured yet. Please add your Gemini API key to the .env file.\n\nIn the meantime, feel free to contact us directly at info@chaartech.in!"
         };
     }
 

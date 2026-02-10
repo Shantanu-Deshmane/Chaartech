@@ -169,6 +169,13 @@ const Navbar = () => {
                         >
                             <div className="mobile-menu-header">
                                 <span className="mobile-menu-title">Menu</span>
+                                <button
+                                    className="mobile-close-btn"
+                                    onClick={() => setIsOpen(false)}
+                                    aria-label="Close menu"
+                                >
+                                    <X size={24} />
+                                </button>
                             </div>
 
                             <ul className="mobile-nav-links">
