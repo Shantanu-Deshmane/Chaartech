@@ -8,11 +8,13 @@ import { ChatWidget } from './components/sections';
 const Home = lazy(() => import('./pages/Home'));
 const About = lazy(() => import('./pages/About'));
 const Services = lazy(() => import('./pages/Services'));
+const Portfolio = lazy(() => import('./pages/Portfolio'));
 const Contact = lazy(() => import('./pages/Contact'));
 const Blog = lazy(() => import('./pages/Blog'));
 const BlogPost = lazy(() => import('./pages/BlogPost'));
 const Privacy = lazy(() => import('./pages/Privacy'));
 const Terms = lazy(() => import('./pages/Terms'));
+const NotFound = lazy(() => import('./pages/NotFound'));
 
 const App = () => {
   return (
@@ -40,6 +42,14 @@ const App = () => {
             element={
               <Suspense fallback={<PageLoader />}>
                 <Services />
+              </Suspense>
+            }
+          />
+          <Route
+            path="portfolio"
+            element={
+              <Suspense fallback={<PageLoader />}>
+                <Portfolio />
               </Suspense>
             }
           />
@@ -84,12 +94,12 @@ const App = () => {
               </Suspense>
             }
           />
-          {/* 404 - Redirect to Home */}
+          {/* 404 */}
           <Route
             path="*"
             element={
               <Suspense fallback={<PageLoader />}>
-                <Home />
+                <NotFound />
               </Suspense>
             }
           />

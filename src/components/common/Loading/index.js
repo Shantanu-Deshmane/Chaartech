@@ -1,1 +1,1 @@
-export { default, Spinner, PageLoader, SectionLoader, CardSkeleton, TextSkeleton } from './Loading';
+export { default, Spinner, PageLoader } from './Loading';

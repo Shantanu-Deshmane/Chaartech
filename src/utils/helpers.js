@@ -71,7 +71,7 @@ export const debounce = (func, wait = 300) => {
     let timeout;
     return (...args) => {
         clearTimeout(timeout);
-        timeout = setTimeout(() => func.apply(this, args), wait);
+        timeout = setTimeout(() => func(...args), wait);
     };
 };
 
@@ -85,7 +85,7 @@ export const throttle = (func, limit = 300) => {
     let inThrottle;
     return (...args) => {
         if (!inThrottle) {
-            func.apply(this, args);
+            func(...args);
             inThrottle = true;
             setTimeout(() => (inThrottle = false), limit);
         }

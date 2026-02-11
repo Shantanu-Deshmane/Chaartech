@@ -203,7 +203,7 @@ ${sanitizedData.message}
                                     </div>
 
                                     <div className="contact-method">
-                                        <div className="contact-method-icon contact-method-icon-secondary">
+                                        <div className="contact-method-icon">
                                             <Phone size={24} />
                                         </div>
                                         <div>
@@ -213,7 +213,7 @@ ${sanitizedData.message}
                                     </div>
 
                                     <div className="contact-method">
-                                        <div className="contact-method-icon contact-method-icon-accent">
+                                        <div className="contact-method-icon">
                                             <MapPin size={24} />
                                         </div>
                                         <div>
@@ -223,7 +223,7 @@ ${sanitizedData.message}
                                     </div>
 
                                     <div className="contact-method">
-                                        <div className="contact-method-icon contact-method-icon-success">
+                                        <div className="contact-method-icon">
                                             <Clock size={24} />
                                         </div>
                                         <div>

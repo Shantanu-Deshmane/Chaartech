@@ -8,7 +8,8 @@ import {
     Testimonials,
     HomeCTA,
     TechStackMarquee,
-    HowItWorks
+    HowItWorks,
+    FAQ
 } from '../../components/sections/Home';
 import './Home.css';
 
@@ -36,6 +37,7 @@ const Home = () => {
             <Testimonials />
 
             <HowItWorks />
+            <FAQ />
             <HomeCTA />
         </div>
     );

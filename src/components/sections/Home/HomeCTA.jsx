@@ -2,7 +2,6 @@ import { Link } from 'react-router-dom';
 import { motion } from 'framer-motion';
 import { Button } from '../../common';
 import { ANIMATIONS } from '../../../utils/constants';
-import { openWhatsApp } from '../../../utils/helpers';
 import './HomeCTA.css';
 
 const HomeCTA = () => {
@@ -22,7 +21,8 @@ const HomeCTA = () => {
                     <div className="cta-final-buttons">
                         <Button
                             size="md"
-                            onClick={() => openWhatsApp("Let's build the next epoch of technology together.")}
+                            as={Link}
+                            to="/contact"
                         >
                             CONTACT OUR TEAM
                         </Button>

@@ -1,27 +1,25 @@
 import { useState, useRef, useEffect } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
-import { MessageCircle, X, Send, Bot, User, Sparkles } from 'lucide-react';
+import { MessageCircle, X, Send, Bot, User } from 'lucide-react';
 import { COMPANY } from '../../../utils/constants';
-import { sendMessageToAI, getAIGreeting } from './chatService';
-import { getResponse } from './chatResponses';
+import { getResponse, getGreeting } from './chatResponses';
 import './ChatWidget.css';
 
 /**
- * AI-Powered Chatbot Widget for customer support
+ * Chatbot Widget for customer support
  */
 const ChatWidget = () => {
     const [isOpen, setIsOpen] = useState(false);
     const [messages, setMessages] = useState([]);
     const [inputValue, setInputValue] = useState('');
     const [isTyping, setIsTyping] = useState(false);
-    const [isConnecting, setIsConnecting] = useState(false);
     const messagesEndRef = useRef(null);
     const inputRef = useRef(null);
 
     // Initialize with greeting when opened
     useEffect(() => {
         if (isOpen && messages.length === 0) {
-            const greeting = getAIGreeting();
+            const greeting = getGreeting();
             setMessages([greeting]);
         }
     }, [isOpen, messages.length]);
@@ -67,26 +65,14 @@ const ChatWidget = () => {
         setMessages(updatedMessages);
         setInputValue('');
         setIsTyping(true);
-        setIsConnecting(true);
 
         try {
-            // Send to AI service
-            const response = await sendMessageToAI(updatedMessages);
-
-            let botResponseText = response.message;
-            let success = response.success;
-
-            // FALLBACK: If AI fails or key is missing, use keyword-based response
-            if (!success) {
-                console.log('AI Service unavailable, using keyword fallback...');
-                const fallback = getResponse(messageText);
-                botResponseText = fallback.text;
-            }
-
-            setIsConnecting(false);
+            // Use keyword-based response
+            const response = getResponse(messageText);
+            const botResponseText = response.text;
 
             // Simulate typing delay for natural feel
-            const typingDelay = Math.min(botResponseText.length * 10, 1500);
+            const typingDelay = Math.min(botResponseText.length * 10, 1000);
             await new Promise(resolve => setTimeout(resolve, typingDelay));
 
             // Add bot response
@@ -95,28 +81,24 @@ const ChatWidget = () => {
                 sender: 'bot',
                 text: botResponseText,
                 timestamp: new Date(),
-                quickReplies: getContextQuickReplies(messageText)
+                quickReplies: response.quickReplies || getContextQuickReplies(messageText)
             };
 
             setMessages(prev => [...prev, botMessage]);
         } catch (error) {
             console.error('Chat error:', error);
 
-            // Final fallback
-            const fallback = getResponse(messageText);
-
-            // Add fallback response
-            const errorMessage = {
+            // Fallback response
+            const botMessage = {
                 id: generateId(),
                 sender: 'bot',
-                text: fallback.text,
+                text: "I'm sorry, I'm having a little trouble understanding. Could you try rephrasing that?",
                 timestamp: new Date(),
-                quickReplies: fallback.quickReplies || ['Try again', 'Contact info']
+                quickReplies: ['View services', 'Contact team']
             };
-            setMessages(prev => [...prev, errorMessage]);
+            setMessages(prev => [...prev, botMessage]);
         } finally {
             setIsTyping(false);
-            setIsConnecting(false);
         }
     };
 
@@ -174,14 +156,12 @@ const ChatWidget = () => {
                         {/* Chat Header */}
                         <div className="chat-header">
                             <div className="chat-header-info">
-                                <div className="chat-avatar">
-                                    <Sparkles size={22} />
-                                </div>
+
                                 <div className="chat-header-text">
-                                    <h4>{COMPANY.name} AI</h4>
+                                    <h4>{COMPANY.name}</h4>
                                     <span className="chat-status">
                                         <span className="status-dot"></span>
-                                        {isConnecting ? 'Thinking...' : 'Online'}
+                                        Online
                                     </span>
                                 </div>
                             </div>
@@ -267,7 +247,7 @@ const ChatWidget = () => {
                                 ref={inputRef}
                                 type="text"
                                 className="chat-input"
-                                placeholder={isTyping ? "AI is typing..." : "Type your message..."}
+                                placeholder={isTyping ? "Typing..." : "Type your message..."}
                                 value={inputValue}
                                 onChange={(e) => setInputValue(e.target.value)}
                                 onKeyDown={handleKeyDown}
@@ -283,11 +263,7 @@ const ChatWidget = () => {
                             </button>
                         </div>
 
-                        {/* AI Badge */}
-                        <div className="chat-ai-badge">
-                            <Sparkles size={12} />
-                            <span>Powered by AI</span>
-                        </div>
+
                     </motion.div>
                 )}
             </AnimatePresence>

@@ -3,7 +3,6 @@ import { motion } from 'framer-motion';
 import { ArrowRight } from 'lucide-react';
 import { Button, CountUp } from '../../common';
 import { ANIMATIONS } from '../../../utils/constants';
-import { openWhatsApp } from '../../../utils/helpers';
 import './Hero.css';
 
 const Hero = () => {
@@ -44,7 +43,8 @@ const Hero = () => {
                         <Button
                             size="md"
                             rightIcon={<ArrowRight size={18} />}
-                            onClick={() => openWhatsApp("Hi! I'd love to discuss a project with ChaarTech.")}
+                            as={Link}
+                            to="/contact"
                         >
                             START YOUR PROJECT
                         </Button>
@@ -63,14 +63,14 @@ const Hero = () => {
                     >
                         <div className="trust-chip">
                             <span className="trust-number">
-                                <CountUp end={100} suffix="+" />
+                                <CountUp end={10} suffix="+" />
                             </span>
                             <span className="trust-label">Projects Delivered</span>
                         </div>
                         <div className="trust-divider" />
                         <div className="trust-chip">
                             <span className="trust-number">
-                                <CountUp end={50} suffix="+" />
+                                <CountUp end={10} suffix="+" />
                             </span>
                             <span className="trust-label">Happy Clients</span>
                         </div>

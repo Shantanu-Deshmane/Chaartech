@@ -7,3 +7,5 @@ export { default as Testimonials } from './Testimonials';
 export { default as HomeCTA } from './HomeCTA';
 export { default as TechStackMarquee } from './TechStackMarquee';
 export { default as HowItWorks } from './HowItWorks';
+export { default as FAQ } from './FAQ';
+
