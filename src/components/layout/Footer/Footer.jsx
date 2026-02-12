@@ -18,9 +18,9 @@ const Footer = () => {
     };
 
     const socialLinks = [
-        { icon: Linkedin, url: COMPANY.social.linkedin, label: 'LinkedIn' },
-        { icon: Instagram, url: COMPANY.social.instagram, label: 'Instagram' },
-        { icon: Twitter, url: COMPANY.social.twitter, label: 'Twitter' },
+        { icon: Linkedin, url: COMPANY.social.linkedin, label: 'https://www.linkedin.com/company/chaartech-solutions/' },
+        { icon: Instagram, url: COMPANY.social.instagram, label: 'https://www.instagram.com/chaartech.in' },
+        { icon: Twitter, url: COMPANY.social.twitter, label: 'https://x.com/chaartech' },
     ];
 
     return (

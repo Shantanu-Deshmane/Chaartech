@@ -1,0 +1,47 @@
+.mouse-follower {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 0;
+    height: 0;
+    pointer-events: none;
+    z-index: 9999;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    /* Normal blend mode to keep it blue on white backgrounds */
+    mix-blend-mode: normal;
+}
+
+.follower-dot {
+    width: 14px;
+    height: 14px;
+    background-color: transparent;
+    border: 2px solid var(--color-primary);
+    border-radius: 50%;
+    position: absolute;
+    box-shadow: 0 0 10px rgba(17, 82, 212, 0.2);
+    transition: all 0.4s cubic-bezier(0.23, 1, 0.32, 1);
+}
+
+/* Hover state effect - change color when over blue elements */
+.mouse-follower.hovering {
+    mix-blend-mode: exclusion;
+}
+
+.mouse-follower.hovering .follower-dot {
+    width: 65px;
+    height: 65px;
+    opacity: 0.8;
+    border-color: #ffffff;
+    border-width: 1px;
+    box-shadow: 0 0 30px rgba(255, 255, 255, 0.4);
+    filter: blur(1px);
+}
+
+/* Media query for hiding on small screens */
+@media (max-width: 1024px) {
+    .mouse-follower {
+        display: none;
+    }
+}
