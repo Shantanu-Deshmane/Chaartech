@@ -8,7 +8,7 @@ export const COMPANY = {
   email: 'info@chaartech.in',
   phone: '+91 7666964743',
   whatsapp: '917666964743',
-  address: 'India',
+  address: 'Karad',
   social: {
     linkedin: 'https://linkedin.com/company/chaartech',
     twitter: 'https://twitter.com/chaartech',

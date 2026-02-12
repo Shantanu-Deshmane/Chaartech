@@ -262,7 +262,7 @@ ${sanitizedData.message}
                                         <Input
                                             label="Your Name"
                                             name="name"
-                                            placeholder="John Doe"
+                                            placeholder="Mahadev"
                                             value={formData.name}
                                             onChange={handleChange}
                                             error={errors.name}
@@ -275,7 +275,7 @@ ${sanitizedData.message}
                                             label="Email Address"
                                             name="email"
                                             type="email"
-                                            placeholder="john@example.com"
+                                            placeholder="mahadev@gmail.com"
                                             value={formData.email}
                                             onChange={handleChange}
                                             error={errors.email}
