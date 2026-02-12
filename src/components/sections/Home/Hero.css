@@ -1,10 +1,11 @@
-/* Hero Next Section */
 .hero-next {
     min-height: 100vh;
+    min-height: clamp(600px, 90vh, 1000px);
     display: flex;
     align-items: center;
     position: relative;
     padding-top: 100px;
+    padding-bottom: 80px;
     background: radial-gradient(circle at 70% 30%, rgba(17, 82, 212, 0.1) 0%, transparent 50%);
     overflow: hidden;
     /* Prevent horizontal scroll from 3D animations */
@@ -288,5 +289,40 @@
 
     .hero-trust {
         justify-content: center;
+    }
+
+    /* Reduce Cube Size for Mobile */
+    .floating-cube {
+        width: 180px;
+        height: 180px;
+    }
+
+    .cube-face {
+        width: 180px;
+        height: 180px;
+    }
+
+    .front {
+        transform: rotateY(0deg) translateZ(90px);
+    }
+
+    .back {
+        transform: rotateY(180deg) translateZ(90px);
+    }
+
+    .right {
+        transform: rotateY(90deg) translateZ(90px);
+    }
+
+    .left {
+        transform: rotateY(-90deg) translateZ(90px);
+    }
+
+    .top {
+        transform: rotateX(90deg) translateZ(90px);
+    }
+
+    .bottom {
+        transform: rotateX(-90deg) translateZ(90px);
     }
 }

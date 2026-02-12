@@ -13,8 +13,6 @@ export const COMPANY = {
     linkedin: 'https://linkedin.com/company/chaartech',
     twitter: 'https://twitter.com/chaartech',
     instagram: 'https://instagram.com/chaartech',
-    facebook: 'https://facebook.com/chaartech',
-    github: 'https://github.com/chaartech',
   }
 };
 
@@ -31,6 +29,7 @@ export const NAV_LINKS = [
   { name: 'Home', path: '/' },
   { name: 'About', path: '/about' },
   { name: 'Services', path: '/services' },
+  { name: 'Portfolio', path: '/portfolio' },
   { name: 'Blog', path: '/blog' },
   { name: 'Contact', path: '/contact' },
 ];
@@ -40,7 +39,7 @@ export const FOOTER_LINKS = {
   company: [
     { name: 'About Us', path: '/about' },
     { name: 'Our Team', path: '/about#team' },
-    { name: 'Careers', path: '/careers' },
+    { name: 'Portfolio', path: '/portfolio' },
     { name: 'Contact', path: '/contact' },
   ],
   services: [
@@ -51,7 +50,7 @@ export const FOOTER_LINKS = {
   ],
   resources: [
     { name: 'Blog', path: '/blog' },
-    { name: 'FAQ', path: '/faq' },
+    { name: 'FAQ', path: '/services#faq' },
     { name: 'Support', path: '/contact' },
   ],
   legal: [

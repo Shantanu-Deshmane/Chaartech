@@ -1,56 +1,57 @@
 export const testimonialsData = [
     {
         id: 1,
-        name: "James Wilson",
-        role: "CEO",
-        company: "TechFlow",
-        message: "ChaarTech transformed our legacy system into a modern powerhouse. Their attention to detail is unmatched.",
+        name: "The Portrait House",
+        role: "Photography Studio",
+        company: "Karad",
+        message: "ChaarTech built a stunning website for our photography studio. The design perfectly captures our brand aesthetic and the booking flow is seamless.",
         rating: 5,
-        avatar: "JW"
+        avatar: "PH"
     },
     {
         id: 2,
-        name: "Sarah Chen",
-        role: "Founder",
-        company: "Bloom Digital",
-        message: "The mobile app they built for us has seen incredible user engagement. Truly experts in their craft.",
+        name: "Siddharth Patil",
+        role: "Business Owner",
+        company: "",
+        message: "Professional team that delivers on time. They understood our requirements perfectly and the final product exceeded expectations.",
         rating: 5,
-        avatar: "SC"
+        avatar: "SP"
     },
     {
         id: 3,
-        name: "Michael Ross",
-        role: "Product Manager",
-        company: "Insightly",
-        message: "Professional, fast, and highly skilled. They didn't just code; they solved real business problems.",
+        name: "Yash Pawar",
+        role: "Entrepreneur",
+        company: "",
+        message: "ChaarTech transformed our online presence completely. Their attention to detail and modern design approach is truly impressive.",
         rating: 5,
-        avatar: "MR"
+        avatar: "YP"
     },
     {
         id: 4,
-        name: "Elena Rodriguez",
-        role: "Marketing Director",
-        company: "GlobalReach",
-        message: "Our SEO rankings tripled within months of working with the ChaarTech team. Highly recommended!",
+        name: "Shankar Kshirsagar",
+        role: "Business Owner",
+        company: "",
+        message: "Excellent work on our digital marketing strategy. We've seen a significant increase in leads and customer engagement since partnering with ChaarTech.",
         rating: 5,
-        avatar: "ER"
+        avatar: "SK"
     },
     {
         id: 5,
-        name: "David Park",
-        role: "CTO",
-        company: "CloudScale",
-        message: "Exceptional cloud migration strategy. Zero downtime and significant performance gains. Fantastic partners.",
+        name: "Shubham Industries",
+        role: "Manufacturing",
+        company: "",
+        message: "The website they built for us perfectly showcases our products and services. Great communication throughout the entire project.",
         rating: 5,
-        avatar: "DP"
+        avatar: "SI"
     },
     {
         id: 6,
-        name: "Priya Mehta",
-        role: "VP of Engineering",
-        company: "NovaBuild",
-        message: "ChaarTech rebuilt our entire platform from the ground up. The new architecture handles 10x the traffic effortlessly.",
+        name: "Piyush Oswal",
+        role: "Entrepreneur",
+        company: "",
+        message: "Highly skilled and reliable team. They didn't just build a website — they provided a complete digital solution for our business needs.",
         rating: 5,
-        avatar: "PM"
+        avatar: "PO"
     }
 ];
+

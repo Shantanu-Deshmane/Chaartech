@@ -4,8 +4,6 @@ import {
     Linkedin,
     Twitter,
     Instagram,
-    Facebook,
-    Github,
     ArrowUp
 } from 'lucide-react';
 import { COMPANY, FOOTER_LINKS } from '../../../utils/constants';
@@ -21,10 +19,8 @@ const Footer = () => {
 
     const socialLinks = [
         { icon: Linkedin, url: COMPANY.social.linkedin, label: 'LinkedIn' },
-        { icon: Facebook, url: COMPANY.social.facebook, label: 'Facebook' },
         { icon: Instagram, url: COMPANY.social.instagram, label: 'Instagram' },
         { icon: Twitter, url: COMPANY.social.twitter, label: 'Twitter' },
-        { icon: Github, url: COMPANY.social.github, label: 'GitHub' },
     ];
 
     return (

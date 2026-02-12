@@ -24,7 +24,7 @@ const Testimonials = () => {
                         What Our Clients Say
                     </h2>
                     <p className="testimonials-subtitle">
-                        Trusted by multiple clients 
+                        Trusted by multiple clients
                     </p>
                 </div>
 
@@ -73,7 +73,7 @@ const Testimonials = () => {
                                     </div>
                                     <div className="reviewer-info">
                                         <p className="reviewer-name">{testimonial.name}</p>
-                                        <p className="reviewer-role">{testimonial.role}, {testimonial.company}</p>
+                                        <p className="reviewer-role">{testimonial.role}{testimonial.company ? `, ${testimonial.company}` : ''}</p>
                                     </div>
                                 </div>
                             </div>

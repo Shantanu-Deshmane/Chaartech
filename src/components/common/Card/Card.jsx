@@ -36,46 +36,6 @@ const Card = ({
     );
 };
 
-/**
- * Card Header component
- */
-export const CardHeader = ({ children, className = '' }) => (
-    <div className={cn('card-header', className)}>{children}</div>
-);
 
-/**
- * Card Body component
- */
-export const CardBody = ({ children, className = '' }) => (
-    <div className={cn('card-body', className)}>{children}</div>
-);
-
-/**
- * Card Footer component
- */
-export const CardFooter = ({ children, className = '' }) => (
-    <div className={cn('card-footer', className)}>{children}</div>
-);
-
-/**
- * Card Image component
- */
-export const CardImage = ({ src, alt, className = '' }) => (
-    <div className={cn('card-image', className)}>
-        <img src={src} alt={alt} loading="lazy" />
-    </div>
-);
-
-/**
- * Card Icon component
- */
-export const CardIcon = ({ children, color, className = '' }) => (
-    <div
-        className={cn('card-icon', className)}
-        style={{ '--icon-color': color }}
-    >
-        {children}
-    </div>
-);
 
 export default Card;

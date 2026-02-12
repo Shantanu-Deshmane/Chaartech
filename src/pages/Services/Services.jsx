@@ -6,7 +6,7 @@ import { services } from '../../data/services';
 import { ANIMATIONS } from '../../utils/constants';
 import { openWhatsApp } from '../../utils/helpers';
 import { Reveal } from '../../components/common';
-import { HowItWorks } from '../../components/sections/Home';
+import { HowItWorks, FAQ } from '../../components/sections/Home';
 import './Services.css';
 
 const Services = () => {
@@ -89,6 +89,9 @@ const Services = () => {
             <Reveal once={false}>
                 <HowItWorks />
             </Reveal>
+
+            {/* FAQ Section */}
+            <FAQ />
         </>
     );
 };
