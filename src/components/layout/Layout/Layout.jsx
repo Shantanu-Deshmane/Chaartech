@@ -2,6 +2,7 @@ import { Outlet } from 'react-router-dom';
 import { useScrollToTop } from '../../../hooks';
 import Navbar from '../Navbar';
 import Footer from '../Footer';
+import { MouseFollower } from '../../common';
 import './Layout.css';
 
 /**
@@ -14,6 +15,7 @@ const Layout = () => {
 
     return (
         <div className="layout">
+            <MouseFollower />
             <Navbar />
             <main className="main-content">
                 <Outlet />
