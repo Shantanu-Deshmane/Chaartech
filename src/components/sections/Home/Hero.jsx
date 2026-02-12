@@ -45,6 +45,7 @@ const Hero = () => {
                             rightIcon={<ArrowRight size={18} />}
                             as={Link}
                             to="/contact"
+                            className="text-white"
                         >
                             START YOUR PROJECT
                         </Button>

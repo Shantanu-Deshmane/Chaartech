@@ -10,9 +10,9 @@ export const COMPANY = {
   whatsapp: '917666964743',
   address: 'Karad',
   social: {
-    linkedin: 'https://linkedin.com/company/chaartech',
+    linkedin: 'https://www.linkedin.com/company/chaartech-solutions/',
     twitter: 'https://twitter.com/chaartech',
-    instagram: 'https://instagram.com/chaartech',
+    instagram: 'https://www.instagram.com/chaartech.in',
   }
 };
 
