@@ -75,22 +75,6 @@ export const debounce = (func, wait = 300) => {
     };
 };
 
-/**
- * Throttle function
- * @param {Function} func - Function to throttle
- * @param {number} limit - Limit time in ms
- * @returns {Function} Throttled function
- */
-export const throttle = (func, limit = 300) => {
-    let inThrottle;
-    return (...args) => {
-        if (!inThrottle) {
-            func(...args);
-            inThrottle = true;
-            setTimeout(() => (inThrottle = false), limit);
-        }
-    };
-};
 
 /**
  * Scrolls to element by ID with offset
@@ -141,17 +125,6 @@ export const getReadingTime = (text) => {
     return Math.ceil(words / wordsPerMinute);
 };
 
-/**
- * Checks if element is in viewport
- * @param {HTMLElement} element - Element to check
- * @param {number} threshold - Visibility threshold (0-1)
- * @returns {boolean} Whether element is visible
- */
-export const isInViewport = (element, threshold = 0.1) => {
-    const rect = element.getBoundingClientRect();
-    const windowHeight = window.innerHeight || document.documentElement.clientHeight;
-    return rect.top <= windowHeight * (1 - threshold) && rect.bottom >= 0;
-};
 
 /**
  * Creates class names from conditions
