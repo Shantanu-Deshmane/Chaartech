@@ -6,8 +6,8 @@ export const COMPANY = {
   description: 'We transform ideas into powerful digital solutions. From stunning websites to cutting-edge apps, we help businesses thrive in the digital age.',
   founded: 2026,
   email: 'info@chaartech.in',
-  phone: '+91 7666964743',
-  whatsapp: '917666964743',
+  phone: '+91 9423501341',
+  whatsapp: '919423501341',
   address: 'Karad',
   social: {
     linkedin: 'https://www.linkedin.com/company/chaartech-solutions/',
@@ -18,7 +18,7 @@ export const COMPANY = {
 
 // WhatsApp Configuration
 export const WHATSAPP = {
-  number: '917666964743',
+  number: '919423501341',
   defaultMessage: 'Hi ChaarTech! I\'m interested in your services. I would like to know more about:',
   ctaMessage: 'Hi! I visited your website and would love to discuss a project with you.',
   serviceInquiry: (service) => `Hi! I'm interested in your ${service} services. Can we discuss?`,

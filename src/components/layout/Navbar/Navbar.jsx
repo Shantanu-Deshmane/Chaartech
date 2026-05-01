@@ -1,10 +1,10 @@
 import { useState, useEffect } from 'react';
 import { Link, NavLink, useLocation } from 'react-router-dom';
 import { motion, AnimatePresence } from 'framer-motion';
-import { Sun, Moon, ArrowUpRight } from 'lucide-react';
+import { Sun, Moon, ArrowUpRight, MousePointer2 } from 'lucide-react';
 import { NAV_LINKS, COMPANY } from '../../../utils/constants';
 import { openWhatsApp } from '../../../utils/helpers';
-import { useTheme } from '../../../context';
+import { useTheme, useUI } from '../../../context';
 import logo from '../../../assets/logo.png';
 import MobileMenu from './MobileMenu';
 import './Navbar.css';
@@ -17,6 +17,7 @@ const Navbar = () => {
     const [isScrolled, setIsScrolled] = useState(false);
     const location = useLocation();
     const { toggleTheme, isDark } = useTheme();
+    const { isReptileActive, toggleReptile } = useUI();
 
     // Handle scroll effect
     useEffect(() => {
@@ -81,6 +82,21 @@ const Navbar = () => {
 
                     {/* Right Actions */}
                     <div className="navbar-right">
+                        {/* Cursor Toggle */}
+                        <motion.button
+                            className={`theme-btn ${isReptileActive ? 'active' : ''}`}
+                            onClick={toggleReptile}
+                            aria-label={isReptileActive ? 'Deactivate interactive cursor' : 'Activate interactive cursor'}
+                            whileHover={{ scale: 1.05 }}
+                            whileTap={{ scale: 0.95 }}
+                            style={{
+                                color: isReptileActive ? 'var(--color-primary)' : 'inherit',
+                                backgroundColor: isReptileActive ? 'rgba(var(--color-primary-rgb), 0.1)' : 'transparent'
+                            }}
+                        >
+                            <MousePointer2 size={18} />
+                        </motion.button>
+
                         {/* Theme Toggle */}
                         <motion.button
                             className="theme-btn"
@@ -128,6 +144,18 @@ const Navbar = () => {
 
                     {/* Mobile Menu Button */}
                     <div className="navbar-mobile-toggle">
+                        <motion.button
+                            className={`theme-btn-mobile ${isReptileActive ? 'active' : ''}`}
+                            onClick={toggleReptile}
+                            aria-label={isReptileActive ? 'Deactivate interactive cursor' : 'Activate interactive cursor'}
+                            whileTap={{ scale: 0.9 }}
+                            style={{
+                                color: isReptileActive ? 'var(--color-primary)' : 'inherit'
+                            }}
+                        >
+                            <MousePointer2 size={18} />
+                        </motion.button>
+
                         <motion.button
                             className="theme-btn-mobile"
                             onClick={toggleTheme}

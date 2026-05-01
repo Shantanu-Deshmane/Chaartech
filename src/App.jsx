@@ -3,6 +3,8 @@ import { Routes, Route } from 'react-router-dom';
 import { Layout } from './components/layout';
 import { PageLoader } from './components/common/Loading';
 import { ChatWidget } from './components/sections';
+import { useUI } from './context';
+import ReptileCursor from './components/common/ReptileCursor';
 
 // Lazy load pages for code splitting
 const Home = lazy(() => import('./pages/Home'));
@@ -17,6 +19,8 @@ const Terms = lazy(() => import('./pages/Terms'));
 const NotFound = lazy(() => import('./pages/NotFound'));
 
 const App = () => {
+  const { isReptileActive } = useUI();
+
   return (
     <>
       <Routes>
@@ -106,7 +110,8 @@ const App = () => {
         </Route>
       </Routes>
 
-      {/* Global Chat Widget */}
+      {/* Global Interactive Elements */}
+      {isReptileActive && <ReptileCursor />}
       <ChatWidget />
     </>
   );

@@ -86,9 +86,9 @@ const Services = () => {
             </Reveal>
 
             {/* Process Section */}
-            <Reveal once={false}>
+            {/* <Reveal once={false}>
                 <HowItWorks />
-            </Reveal>
+            </Reveal> */}
 
             {/* FAQ Section */}
             <FAQ />
